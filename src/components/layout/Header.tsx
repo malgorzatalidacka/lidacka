@@ -1,17 +1,20 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Header = () => {
   const location = useLocation();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  
+  const { t } = useLanguage();
+
   const navItems = [
-    { label: "Work", path: "/work" },
-    { label: "About", path: "/about" },
-    { label: "Contact", path: "/contact" },
-  ];
+    { key: "nav.work", path: "/work" },
+    { key: "nav.about", path: "/about" },
+    { key: "nav.contact", path: "/contact" },
+  ] as const;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,29 +40,33 @@ const Header = () => {
         !isVisible && "-translate-y-full"
       )}
     >
-      <nav className="container-editorial flex items-center justify-between h-14 md:h-16">
+      <nav className="container-editorial flex items-center justify-between gap-3 h-14 md:h-16">
         <Link 
           to="/" 
-          className="text-lg md:text-xl font-medium tracking-tight hover:opacity-70 transition-opacity"
+          className="text-lg md:text-xl font-medium tracking-tight hover:opacity-70 transition-opacity shrink-0"
         >
           Lidacka.
         </Link>
         
-        <ul className="flex items-center gap-6 md:gap-10">
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <Link
-                to={item.path}
-                className={cn(
-                  "label-uppercase link-underline transition-opacity hover:opacity-70",
-                  location.pathname === item.path && "opacity-50"
-                )}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-4 md:gap-8">
+          <ul className="flex items-center gap-4 sm:gap-6 md:gap-10">
+            {navItems.map((item) => (
+              <li key={item.path}>
+                <Link
+                  to={item.path}
+                  className={cn(
+                    "label-uppercase link-underline transition-opacity hover:opacity-70",
+                    location.pathname === item.path && "opacity-50"
+                  )}
+                >
+                  {t(item.key)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <LanguageSwitcher />
+        </div>
       </nav>
     </header>
   );
