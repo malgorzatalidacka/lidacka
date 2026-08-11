@@ -3,7 +3,7 @@ import ScrollRevealText from "@/components/ScrollRevealText";
 
 const About = () => {
   const experience = [
-    { role: "Independent Designer", company: "Jordan Studio", period: "2020 — Present" },
+    { role: "Independent Designer", company: "Lidacka Studio", period: "2020 — Present" },
     { role: "Senior Designer", company: "Pentagram", period: "2018 — 2020" },
     { role: "Designer", company: "Collins", period: "2016 — 2018" },
     { role: "Junior Designer", company: "Base Design", period: "2014 — 2016" },
@@ -36,7 +36,7 @@ const About = () => {
         <div className="aspect-[16/9] overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop"
-            alt="Jordan Studio workspace"
+            alt="Lidacka Studio workspace"
             className="w-full h-full object-cover"
           />
         </div>
@@ -48,8 +48,8 @@ const About = () => {
           <div className="col-span-12 md:col-span-2"></div>
           <div className="col-span-12 md:col-span-8 space-y-6">
             <p className="text-body text-muted-foreground">
-              I'm Jordan, an independent artist and designer based in New York City. 
-              With over 8 years of experience working with startups, agencies, and established 
+              I'm Lidacka, an independent artist and designer based in New York City. 
+              With over 8 years of experience working with startups, agencies, and established
               brands, I've developed a deep understanding of what makes a brand resonate with 
               its audience.
             </p>

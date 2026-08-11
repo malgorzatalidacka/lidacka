@@ -77,7 +77,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8 border-t border-background/10">
           <p className="text-background/60 text-sm">
-            © {currentYear} Jordan Studio. All rights reserved.
+            © {currentYear} Lidacka Studio. All rights reserved.
           </p>
           <a href="#" className="text-background/80 text-sm hover:opacity-70 transition-opacity underline underline-offset-4">
             Privacy Policy
