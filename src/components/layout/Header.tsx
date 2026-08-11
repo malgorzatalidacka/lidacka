@@ -61,7 +61,14 @@ const Header = () => {
                     location.pathname === item.path && "opacity-50"
                   )}
                 >
-                  {t(item.key)}
+                  {item.path === "/passion-play" ? (
+                    <>
+                      <span className="sm:hidden">P&amp;P</span>
+                      <span className="hidden sm:inline">{t(item.key)}</span>
+                    </>
+                  ) : (
+                    t(item.key)
+                  )}
                 </Link>
               </li>
             ))}
