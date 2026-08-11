@@ -13,10 +13,18 @@ export type Localized = Record<Language, string>;
 export const translations = {
   pl: {
     "nav.work": "Projekty",
+    "nav.passion": "Passion & Play",
     "nav.about": "O mnie",
     "nav.contact": "Kontakt",
     "nav.language": "Wybór języka",
     "nav.languageShort": "Język",
+
+    "passion.label": "Passion & Play",
+    "passion.title": "Rzeczy, które kształtują sposób, w jaki projektuję_",
+    "passion.intro":
+      "Zbiór inspiracji, zainteresowań i drobnych historii spoza pracy zawodowej — ruch, rzemiosło, książki, obserwacje i eksperymenty, które wracają potem w moich projektach edukacyjnych.",
+    "passion.outro": "Kolekcja rośnie — nowe wpisy dochodzą, gdy coś mnie zaciekawi.",
+
 
     "home.intro":
       "Pomagam zespołom budować mocne doświadczenia marki. Jestem Lidacka, niezależna artystka i projektantka z Nowego Jorku. Specjalizuję się w identyfikacji wizualnej i systemach wizualnych dla firm, które cenią przemyślany design i strategiczne myślenie.",
@@ -79,10 +87,18 @@ export const translations = {
   },
   en: {
     "nav.work": "Work",
+    "nav.passion": "Passion & Play",
     "nav.about": "About",
     "nav.contact": "Contact",
     "nav.language": "Language selection",
     "nav.languageShort": "Language",
+
+    "passion.label": "Passion & Play",
+    "passion.title": "The things that shape the way I design_",
+    "passion.intro":
+      "A curated collection of inspirations, interests and small stories from outside my professional work — movement, craft, books, observations and experiments that find their way back into the learning experiences I design.",
+    "passion.outro": "The collection keeps growing — new entries appear whenever something catches my attention.",
+
 
     "home.intro":
       "I help teams build strong brand experiences. I'm Lidacka, an independent artist and designer based in New York City. I specialize in brand identity and visual systems for companies that value thoughtful design and strategic thinking.",

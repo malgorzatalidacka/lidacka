@@ -12,6 +12,7 @@ const Header = () => {
 
   const navItems = [
     { key: "nav.work", path: "/work" },
+    { key: "nav.passion", path: "/passion-play" },
     { key: "nav.about", path: "/about" },
     { key: "nav.contact", path: "/contact" },
   ] as const;
@@ -48,18 +49,26 @@ const Header = () => {
           Lidacka.
         </Link>
         
-        <div className="flex items-center gap-3 md:gap-8">
-          <ul className="flex items-center gap-3 sm:gap-6 md:gap-10">
+        <div className="flex items-center gap-2 md:gap-8 min-w-0">
+          <ul className="flex items-center gap-2 sm:gap-4 md:gap-8 min-w-0 overflow-x-auto no-scrollbar">
+
             {navItems.map((item) => (
               <li key={item.path}>
                 <Link
                   to={item.path}
                   className={cn(
-                    "label-uppercase link-underline transition-opacity hover:opacity-70 whitespace-nowrap text-[10px] md:text-xs",
+                    "label-uppercase link-underline transition-opacity hover:opacity-70 whitespace-nowrap text-[9px] sm:text-[10px] md:text-xs tracking-[0.1em] md:tracking-[0.15em]",
                     location.pathname === item.path && "opacity-50"
                   )}
                 >
-                  {t(item.key)}
+                  {item.path === "/passion-play" ? (
+                    <>
+                      <span className="sm:hidden">P&amp;P</span>
+                      <span className="hidden sm:inline">{t(item.key)}</span>
+                    </>
+                  ) : (
+                    t(item.key)
+                  )}
                 </Link>
               </li>
             ))}
