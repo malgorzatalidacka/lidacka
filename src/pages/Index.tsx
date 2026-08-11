@@ -19,7 +19,7 @@ const Index = () => {
       {/* Introduction with Scroll Reveal */}
       <section className="container-editorial py-24 md:py-32">
         <ScrollRevealText className="text-xl md:text-2xl lg:text-[42px] font-normal leading-tight lg:leading-[1.2] max-w-5xl">
-          I help teams build high-impact brand experiences. I'm Jordan, an independent artist and designer based in New York City. I specialize in brand identity and visual systems for companies that value thoughtful design and strategic thinking.
+          I help teams build high-impact brand experiences. I'm Lidacka, an independent artist and designer based in New York City. I specialize in brand identity and visual systems for companies that value thoughtful design and strategic thinking.
         </ScrollRevealText>
       </section>
 

@@ -42,7 +42,7 @@ const Header = () => {
           to="/" 
           className="text-lg md:text-xl font-medium tracking-tight hover:opacity-70 transition-opacity"
         >
-          Jordan.
+          Lidacka.
         </Link>
         
         <ul className="flex items-center gap-6 md:gap-10">
