@@ -8,6 +8,7 @@ import Work from "./pages/Work";
 import CaseStudy from "./pages/CaseStudy";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import PassionPlay from "./pages/PassionPlay";
 import Styleguide from "./pages/Styleguide";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "@/i18n/LanguageContext";
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/work/:id" element={<CaseStudy />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/passion-play" element={<PassionPlay />} />
             <Route path="/styleguide" element={<Styleguide />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
