@@ -40,22 +40,22 @@ const Header = () => {
         !isVisible && "-translate-y-full"
       )}
     >
-      <nav className="container-editorial flex items-center justify-between gap-3 h-14 md:h-16">
+      <nav className="container-editorial flex items-center justify-between gap-2 h-14 md:h-16">
         <Link 
           to="/" 
-          className="text-lg md:text-xl font-medium tracking-tight hover:opacity-70 transition-opacity shrink-0"
+          className="text-base md:text-xl font-medium tracking-tight hover:opacity-70 transition-opacity shrink-0"
         >
           Lidacka.
         </Link>
         
-        <div className="flex items-center gap-4 md:gap-8">
-          <ul className="flex items-center gap-4 sm:gap-6 md:gap-10">
+        <div className="flex items-center gap-3 md:gap-8">
+          <ul className="flex items-center gap-3 sm:gap-6 md:gap-10">
             {navItems.map((item) => (
               <li key={item.path}>
                 <Link
                   to={item.path}
                   className={cn(
-                    "label-uppercase link-underline transition-opacity hover:opacity-70",
+                    "label-uppercase link-underline transition-opacity hover:opacity-70 whitespace-nowrap text-[10px] md:text-xs",
                     location.pathname === item.path && "opacity-50"
                   )}
                 >
@@ -65,7 +65,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <LanguageSwitcher />
+          <LanguageSwitcher className="shrink-0" />
         </div>
       </nav>
     </header>
@@ -73,3 +73,4 @@ const Header = () => {
 };
 
 export default Header;
+
