@@ -1,33 +1,36 @@
 import Layout from "@/components/layout/Layout";
 import ScrollRevealText from "@/components/ScrollRevealText";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const About = () => {
+  const { t, tl, language } = useLanguage();
+
   const experience = [
-    { role: "Independent Designer", company: "Lidacka Studio", period: "2020 — Present" },
-    { role: "Senior Designer", company: "Pentagram", period: "2018 — 2020" },
-    { role: "Designer", company: "Collins", period: "2016 — 2018" },
-    { role: "Junior Designer", company: "Base Design", period: "2014 — 2016" },
+    { role: { pl: "Niezależna projektantka", en: "Independent Designer" }, company: "Lidacka Studio", period: "2020 — ".concat(language === "pl" ? "obecnie" : "Present") },
+    { role: { pl: "Starsza projektantka", en: "Senior Designer" }, company: "Pentagram", period: "2018 — 2020" },
+    { role: { pl: "Projektantka", en: "Designer" }, company: "Collins", period: "2016 — 2018" },
+    { role: { pl: "Młodsza projektantka", en: "Junior Designer" }, company: "Base Design", period: "2014 — 2016" },
   ];
 
   const services = [
-    "Brand Strategy & Positioning",
-    "Visual Identity Design",
-    "Logo & Mark Development",
-    "Typography Systems",
-    "Color Palette Development",
-    "Brand Guidelines",
-    "Art Direction",
-    "Digital Product Design",
-    "Motion Design",
-    "Print & Packaging",
+    { pl: "Strategia i pozycjonowanie marki", en: "Brand Strategy & Positioning" },
+    { pl: "Projektowanie identyfikacji wizualnej", en: "Visual Identity Design" },
+    { pl: "Logo i znaki graficzne", en: "Logo & Mark Development" },
+    { pl: "Systemy typograficzne", en: "Typography Systems" },
+    { pl: "Opracowanie palety kolorów", en: "Color Palette Development" },
+    { pl: "Księgi znaku i wytyczne marki", en: "Brand Guidelines" },
+    { pl: "Kierownictwo artystyczne", en: "Art Direction" },
+    { pl: "Projektowanie produktów cyfrowych", en: "Digital Product Design" },
+    { pl: "Motion design", en: "Motion Design" },
+    { pl: "Druk i opakowania", en: "Print & Packaging" },
   ];
 
   return (
     <Layout>
       {/* Hero */}
       <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-24">
-        <ScrollRevealText className="heading-large">
-          Designer focused on meaningful digital experiences_
+        <ScrollRevealText key={language} className="heading-large">
+          {t("about.title")}
         </ScrollRevealText>
       </section>
 
@@ -36,7 +39,8 @@ const About = () => {
         <div className="aspect-[16/9] overflow-hidden">
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=900&fit=crop"
-            alt="Lidacka Studio workspace"
+            alt={t("about.imageAlt")}
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </div>
@@ -47,18 +51,8 @@ const About = () => {
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-2"></div>
           <div className="col-span-12 md:col-span-8 space-y-6">
-            <p className="text-body text-muted-foreground">
-              I'm Lidacka, an independent artist and designer based in New York City. 
-              With over 8 years of experience working with startups, agencies, and established
-              brands, I've developed a deep understanding of what makes a brand resonate with 
-              its audience.
-            </p>
-            <p className="text-body text-muted-foreground">
-              My approach combines strategic thinking with meticulous craft—ensuring that every 
-              design decision serves a purpose while maintaining the highest standards of visual 
-              excellence. When I'm not designing, you'll find me exploring typography archives, 
-              photographing urban landscapes, or mentoring emerging designers.
-            </p>
+            <p className="text-body text-muted-foreground">{t("about.bio1")}</p>
+            <p className="text-body text-muted-foreground">{t("about.bio2")}</p>
           </div>
         </div>
       </section>
@@ -67,7 +61,7 @@ const About = () => {
       <section className="container-editorial pb-24 md:pb-32">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-2">
-            <span className="label-uppercase text-muted-foreground">Experience</span>
+            <span className="label-uppercase text-muted-foreground">{t("about.experience")}</span>
           </div>
           <div className="col-span-12 md:col-span-10">
             {experience.map((item, index) => (
@@ -76,7 +70,7 @@ const About = () => {
                 className="py-5 border-b border-border flex flex-col md:flex-row md:items-center md:justify-between gap-2"
               >
                 <div>
-                  <h3 className="text-body font-medium">{item.role}</h3>
+                  <h3 className="text-body font-medium">{tl(item.role)}</h3>
                   <p className="text-muted-foreground text-sm">{item.company}</p>
                 </div>
                 <span className="text-sm text-muted-foreground">{item.period}</span>
@@ -90,15 +84,12 @@ const About = () => {
       <section className="container-editorial pb-24 md:pb-32">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-2">
-            <span className="label-uppercase text-muted-foreground">Services</span>
+            <span className="label-uppercase text-muted-foreground">{t("about.services")}</span>
           </div>
           <div className="col-span-12 md:col-span-10">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="py-4 border-b border-border"
-              >
-                <span className="text-body">{service}</span>
+              <div key={index} className="py-4 border-b border-border">
+                <span className="text-body">{tl(service)}</span>
               </div>
             ))}
           </div>
