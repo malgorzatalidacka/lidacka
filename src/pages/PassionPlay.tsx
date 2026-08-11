@@ -40,7 +40,7 @@ const PassionCard = ({ entry, index }: { entry: PassionEntry; index: number }) =
       </span>
 
       {entry.image && (
-        <div className="overflow-hidden aspect-[4/3]">
+        <div className="overflow-hidden aspect-[16/10]">
           <img
             src={entry.image}
             alt={tl(entry.title)}
