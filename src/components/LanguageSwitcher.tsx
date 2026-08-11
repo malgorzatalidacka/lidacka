@@ -22,7 +22,7 @@ const LanguageSwitcher = ({ className }: { className?: string }) => {
             aria-label={lang.name}
             title={lang.name}
             className={cn(
-              "label-uppercase px-2 py-1 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+              "label-uppercase text-[10px] md:text-xs px-1.5 md:px-2 py-1 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
               language === lang.code
                 ? "bg-foreground text-background"
                 : "text-muted-foreground hover:text-foreground",
