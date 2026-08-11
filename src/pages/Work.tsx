@@ -2,14 +2,17 @@ import Layout from "@/components/layout/Layout";
 import ProjectCard from "@/components/ProjectCard";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import { projects } from "@/data/projects";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const Work = () => {
+  const { t, language } = useLanguage();
+
   return (
     <Layout>
       {/* Hero */}
       <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-20">
-        <ScrollRevealText className="heading-display">
-          A selection of projects from the studio_
+        <ScrollRevealText key={language} className="heading-display">
+          {t("work.title")}
         </ScrollRevealText>
       </section>
 
