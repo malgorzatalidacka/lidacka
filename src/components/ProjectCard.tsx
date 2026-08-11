@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Project } from "@/data/projects";
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 interface ProjectCardProps {
   project: Project;
@@ -12,6 +13,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: ProjectCardProps) => {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const { tl } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -78,8 +80,10 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
       
       <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 lg:p-12 z-20">
-        <div className="flex items-center gap-3 mb-3 md:mb-4">
-          <span className="label-uppercase text-white/70">{project.category}</span>
+        <div className={`flex items-center gap-3 mb-3 transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}>
+          <span className="label-uppercase text-white/70">{tl(project.category)}</span>
           <span className="text-white/40">•</span>
           <span className="label-uppercase text-white/70">{project.year}</span>
         </div>
