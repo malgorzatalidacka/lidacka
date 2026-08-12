@@ -13,13 +13,13 @@ export type Localized = Record<Language, string>;
 export const translations = {
   pl: {
     "nav.work": "Projekty",
-    "nav.passion": "Passion & Play",
+    "nav.passion": "Inspiracje",
     "nav.about": "O mnie",
     "nav.contact": "Kontakt",
     "nav.language": "Wybór języka",
     "nav.languageShort": "Język",
 
-    "passion.label": "Passion & Play",
+    "passion.label": "Inspiracje",
     "passion.title": "Rzeczy, które kształtują sposób, w jaki projektuję_",
     "passion.intro":
       "Zbiór inspiracji, zainteresowań i drobnych historii spoza pracy zawodowej — ruch, rzemiosło, książki, obserwacje i eksperymenty, które wracają potem w moich projektach edukacyjnych.",
