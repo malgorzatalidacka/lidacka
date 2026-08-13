@@ -3,10 +3,11 @@ import Layout from "@/components/layout/Layout";
 import ProjectCard from "@/components/ProjectCard";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import { projects } from "@/data/projects";
+import { parentClubsIntro } from "@/data/parentClubs";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Work = () => {
-  const { t, language } = useLanguage();
+  const { t, tl, language } = useLanguage();
 
   return (
     <Layout>
