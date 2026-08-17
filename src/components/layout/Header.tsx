@@ -12,6 +12,7 @@ const Header = () => {
 
   const navItems = [
     { key: "nav.work", path: "/work" },
+    { key: "nav.showroom", path: "/showroom" },
     { key: "nav.learning", path: "/interactive-learning" },
     { key: "nav.passion", path: "/passion-play" },
     { key: "nav.about", path: "/about" },
