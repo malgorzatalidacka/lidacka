@@ -13,6 +13,7 @@ export type Localized = Record<Language, string>;
 export const translations = {
   pl: {
     "nav.work": "Projekty",
+    "nav.showroom": "Showroom",
     "nav.learning": "Doświadczenia edukacyjne",
 
     "learning.label": "Doświadczenia edukacyjne",
@@ -107,6 +108,7 @@ export const translations = {
   },
   en: {
     "nav.work": "Work",
+    "nav.showroom": "Showroom",
     "nav.learning": "Interactive Learning",
 
     "learning.label": "Interactive Learning",

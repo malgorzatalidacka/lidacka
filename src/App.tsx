@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import PassionPlay from "./pages/PassionPlay";
 import InteractiveLearning from "./pages/InteractiveLearning";
 import ParentClubs from "./pages/ParentClubs";
+import Showroom from "./pages/Showroom";
 import Styleguide from "./pages/Styleguide";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "@/i18n/LanguageContext";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/work" element={<Work />} />
             <Route path="/work/kluby-rodzicow" element={<ParentClubs />} />
             <Route path="/work/:id" element={<CaseStudy />} />
+            <Route path="/showroom" element={<Showroom />} />
             <Route path="/interactive-learning" element={<InteractiveLearning />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
