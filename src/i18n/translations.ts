@@ -14,26 +14,7 @@ export const translations = {
   pl: {
     "nav.work": "Projekty",
     "nav.showroom": "Showroom",
-    "nav.learning": "Doświadczenia edukacyjne",
 
-    "learning.label": "Doświadczenia edukacyjne",
-    "learning.title": "Interaktywna gra edukacyjna w Articulate 360_",
-    "learning.intro":
-      "Prezentacja interaktywnego modułu e-learningowego stworzonego w Articulate 360 — scenariusz decyzyjny, w którym uczestnik uczy się przez wybory, informację zwrotną i mikro-wyzwania.",
-    "learning.placeholder.label": "Miejsce na moduł",
-    "learning.placeholder.body":
-      "Tutaj pojawi się osadzona gra z Articulate 360. Wystarczy wkleić publiczny link do kursu (Review 360 lub własny hosting).",
-    "learning.embedNote":
-      "Moduł działa najlepiej na pełnym ekranie, w przeglądarce na komputerze lub tablecie.",
-    "learning.f1.title": "Nauka przez decyzje",
-    "learning.f1.body":
-      "Rozgałęziony scenariusz stawia uczestnika w realnych sytuacjach — każdy wybór ma konsekwencje i natychmiastową informację zwrotną.",
-    "learning.f2.title": "Projekt doświadczenia",
-    "learning.f2.body":
-      "Spójny system wizualny, czytelna nawigacja i rytm ekranów zaprojektowane pod utrzymanie uwagi i zrozumiałość treści.",
-    "learning.f3.title": "Mierzalne efekty",
-    "learning.f3.body":
-      "Moduł zgodny ze standardem SCORM/xAPI, gotowy do publikacji na platformie LMS i śledzenia postępów uczestników.",
     "nav.passion": "Inspiracje",
     "nav.about": "O mnie",
     "nav.contact": "Kontakt",
@@ -109,26 +90,7 @@ export const translations = {
   en: {
     "nav.work": "Work",
     "nav.showroom": "Showroom",
-    "nav.learning": "Interactive Learning",
 
-    "learning.label": "Interactive Learning",
-    "learning.title": "An interactive learning game built in Articulate 360_",
-    "learning.intro":
-      "A showcase of an interactive e-learning module created in Articulate 360 — a decision-based scenario where learners progress through choices, feedback and micro-challenges.",
-    "learning.placeholder.label": "Module placeholder",
-    "learning.placeholder.body":
-      "The Articulate 360 game will be embedded here. Just paste the public course link (Review 360 or self-hosted).",
-    "learning.embedNote":
-      "The module works best in fullscreen, on a desktop or tablet browser.",
-    "learning.f1.title": "Learning through decisions",
-    "learning.f1.body":
-      "A branching scenario places learners in realistic situations — every choice has consequences and immediate feedback.",
-    "learning.f2.title": "Experience design",
-    "learning.f2.body":
-      "A consistent visual system, clear navigation and screen rhythm designed to hold attention and keep content understandable.",
-    "learning.f3.title": "Measurable outcomes",
-    "learning.f3.body":
-      "Built to SCORM/xAPI standards, ready to publish on an LMS and track learner progress.",
     "nav.passion": "Passion & Play",
     "nav.about": "About",
     "nav.contact": "Contact",
