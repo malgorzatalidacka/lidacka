@@ -15,8 +15,6 @@ export const translations = {
     "nav.work": "Projekty",
     "nav.showroom": "Showroom",
 
-    "learning.embedNote":
-      "Moduł działa najlepiej na pełnym ekranie, w przeglądarce na komputerze lub tablecie.",
     "nav.passion": "Inspiracje",
     "nav.about": "O mnie",
     "nav.contact": "Kontakt",
@@ -93,8 +91,6 @@ export const translations = {
     "nav.work": "Work",
     "nav.showroom": "Showroom",
 
-    "learning.embedNote":
-      "The module works best in fullscreen, on a desktop or tablet browser.",
     "nav.passion": "Passion & Play",
     "nav.about": "About",
     "nav.contact": "Contact",
