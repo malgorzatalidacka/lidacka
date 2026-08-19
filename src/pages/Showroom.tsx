@@ -80,7 +80,7 @@ const Showroom = () => {
     <Layout>
       {/* HERO */}
       <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-24">
-        <span className="label-uppercase text-muted-foreground">{tl("showroom.label")}</span>
+        <span className="label-uppercase text-muted-foreground">{t("showroom.label")}</span>
         <ScrollRevealText key={language} className="heading-display mt-6 max-w-5xl text-balance">
           Learning should be experienced, not just explained.
         </ScrollRevealText>
