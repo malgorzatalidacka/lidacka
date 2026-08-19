@@ -69,7 +69,7 @@ const SectionHead = ({
 );
 
 const Showroom = () => {
-  const { tl, language } = useLanguage();
+  const { tl, t, language } = useLanguage();
   const pl = language === "pl";
 
   const scrollTo = (id: string) => {
@@ -80,7 +80,7 @@ const Showroom = () => {
     <Layout>
       {/* HERO */}
       <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-24">
-        <span className="label-uppercase text-muted-foreground">Showroom</span>
+        <span className="label-uppercase text-muted-foreground">{t("showroom.label")}</span>
         <ScrollRevealText key={language} className="heading-display mt-6 max-w-5xl text-balance">
           Learning should be experienced, not just explained.
         </ScrollRevealText>
