@@ -69,7 +69,7 @@ const SectionHead = ({
 );
 
 const Showroom = () => {
-  const { tl, language } = useLanguage();
+  const { tl, t, language } = useLanguage();
   const pl = language === "pl";
 
   const scrollTo = (id: string) => {
