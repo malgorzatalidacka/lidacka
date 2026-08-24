@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PassionPlay from "./pages/PassionPlay";
 import ParentClubs from "./pages/ParentClubs";
+import Awans from "./pages/Awans";
 import Showroom from "./pages/Showroom";
 import Styleguide from "./pages/Styleguide";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/work" element={<Work />} />
             <Route path="/work/kluby-rodzicow" element={<ParentClubs />} />
+            <Route path="/work/awans" element={<Awans />} />
             <Route path="/work/:id" element={<CaseStudy />} />
             <Route path="/showroom" element={<Showroom />} />
             <Route path="/about" element={<About />} />
