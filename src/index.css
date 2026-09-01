@@ -139,3 +139,21 @@
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
+
+/* Warm, optimistic scoped theme for the Action for Happiness essay */
+.theme-happiness {
+  --background: 40 46% 97%;
+  --foreground: 26 22% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 26 22% 13%;
+  --muted: 38 34% 94%;
+  --muted-foreground: 28 12% 40%;
+  --border: 36 28% 88%;
+  --accent: 22 88% 60%;
+  --accent-foreground: 0 0% 100%;
+  --happy-accent: 22 88% 60%;
+  --happy-sun: 44 96% 66%;
+  --happy-bloom: 340 72% 78%;
+  --happy-surface: 38 44% 95%;
+}
+
