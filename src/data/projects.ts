@@ -58,28 +58,28 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "verso-studio",
-    title: "Verso Studio_",
-    client: "Verso Architecture",
+    id: "awans",
+    title: "AWANS_",
+    client: "Małopolski Związek Piłki Ręcznej",
     category: {
-      pl: "Identyfikacja wizualna",
-      en: "Visual Identity",
+      pl: "Learning Design · Edukacja sportowa · Program rozwojowy",
+      en: "Learning Design · Sports Education · Development Programme",
     },
-    year: "2024",
+    year: "2023–2024",
     description: {
-      pl: "Pełny redesign identyfikacji wizualnej butikowej pracowni architektonicznej specjalizującej się w adaptacji budynków i ochronie zabytków.",
-      en: "Complete visual identity redesign for a boutique architecture firm specializing in adaptive reuse and historic preservation.",
+      pl: "AWANS to program rozwojowy wspierający młodych sędziów piłki ręcznej w drodze od pierwszych doświadczeń na boisku do certyfikacji i sędziowania na wyższym poziomie. Program łączy warsztaty, treningi praktyczne, mecze, informację zwrotną, mentoring i ocenę w jedną spójną ścieżkę uczenia się.",
+      en: "AWANS is a development programme designed to support young handball referees in progressing from their first experiences on court towards certification and higher-level refereeing. The programme combines workshops, practical training, matches, feedback, mentoring and assessment into one structured learning journey.",
     },
     challenge: {
-      pl: "Verso musiało pogodzić głęboki szacunek dla architektury historycznej z nowoczesną, przyszłościową obecnością marki.",
-      en: "Verso needed to balance their deep respect for historical architecture with a contemporary, forward-thinking brand presence.",
+      pl: "Młodzi sędziowie często znają przepisy, ale bycie pewnym siebie sędzią wymaga znacznie więcej niż wiedza teoretyczna. Potrzebują przestrzeni, w której mogą ćwiczyć decyzje, otrzymywać konstruktywny feedback i stopniowo budować samodzielność.",
+      en: "Young referees often know the rules, but becoming a confident referee requires much more than theoretical knowledge. They need a space to practise decisions, receive constructive feedback and gradually build independence.",
     },
     solution: {
-      pl: "Identyfikacja czerpie z rysunków architektonicznych i dokumentacji budowlanej, wykorzystując precyzyjną kreskę i powściągliwą paletę barw łączącą dziedzictwo z nowoczesnością.",
-      en: "The identity draws from architectural blueprints and construction documents, using precise linework and a restrained color palette that speaks to both heritage and modernity.",
+      pl: "AWANS został zaprojektowany jako uporządkowana ścieżka rozwoju: od pierwszego gwizdka, przez praktykę i refleksję, aż po egzamin końcowy. Połączenie teorii, realnych sytuacji meczowych, mentoringu i oceny zamienia wiedzę w zawodową kompetencję.",
+      en: "AWANS was designed as a structured development pathway: from the first whistle, through practice and reflection, to the final exam. The combination of theory, real match situations, mentoring and assessment turns knowledge into professional competence.",
     },
-    image: holographicBust,
-    images: [holographicBust, palmDigital, deerForest],
+    image: awansHero,
+    images: [awansHero],
     featured: true
   },
   {
