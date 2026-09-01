@@ -27,6 +27,17 @@ export const translations = {
     "passion.intro":
       "Zbiór inspiracji, zainteresowań i drobnych historii spoza pracy zawodowej — ruch, rzemiosło, książki, obserwacje i eksperymenty, które wracają potem w moich projektach edukacyjnych.",
     "passion.outro": "Kolekcja rośnie — nowe wpisy dochodzą, gdy coś mnie zaciekawi.",
+    "passion.featureTag": "Esej wizualny",
+    "passion.featureTitle": "Action for Happiness",
+    "passion.featureBody":
+      "Osobista opowieść o idei, która zmieniła moje podejście do projektowania: dobrostan nie jest dodatkiem do nauki, tylko jej warunkiem.",
+    "passion.featureCta": "Przeczytaj esej",
+    "happiness.keysLabel": "Sześć kluczy",
+    "happiness.keysTitle": "GREAT DREAM — i co z tego robię w projektowaniu",
+    "happiness.keysIntro":
+      "Action for Happiness porządkuje dobrostan w kilka prostych obszarów. Poniżej moja własna wersja: każdy obszar plus decyzja projektowa, która z niego wynika.",
+    "happiness.back": "Wróć do inspiracji",
+
 
 
     "home.intro":
@@ -104,6 +115,17 @@ export const translations = {
     "passion.intro":
       "A curated collection of inspirations, interests and small stories from outside my professional work — movement, craft, books, observations and experiments that find their way back into the learning experiences I design.",
     "passion.outro": "The collection keeps growing — new entries appear whenever something catches my attention.",
+    "passion.featureTag": "Visual essay",
+    "passion.featureTitle": "Action for Happiness",
+    "passion.featureBody":
+      "A personal story about an idea that changed the way I design: wellbeing is not an add-on to learning — it is its precondition.",
+    "passion.featureCta": "Read the essay",
+    "happiness.keysLabel": "Six keys",
+    "happiness.keysTitle": "GREAT DREAM — and what I do with it as a designer",
+    "happiness.keysIntro":
+      "Action for Happiness organises wellbeing into a few simple areas. Below is my own version: each area plus the design decision that follows from it.",
+    "happiness.back": "Back to inspirations",
+
 
 
     "home.intro":

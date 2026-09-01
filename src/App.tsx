@@ -9,6 +9,8 @@ import CaseStudy from "./pages/CaseStudy";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PassionPlay from "./pages/PassionPlay";
+import ActionForHappiness from "./pages/ActionForHappiness";
+
 import ParentClubs from "./pages/ParentClubs";
 import Awans from "./pages/Awans";
 import Showroom from "./pages/Showroom";
