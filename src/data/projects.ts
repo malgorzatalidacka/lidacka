@@ -3,8 +3,6 @@ import flowersPainting from '@/assets/projects/flowers-painting.jpg';
 import watercolorFlowers from '@/assets/projects/watercolor-flowers.jpg';
 import varoomMagazine from '@/assets/projects/varoom-magazine.jpg';
 import palmDigital from '@/assets/projects/palm-digital.jpg';
-import deerForest from '@/assets/projects/deer-forest.jpg';
-import holographicBust from '@/assets/projects/holographic-bust.jpg';
 import catIllustration from '@/assets/projects/cat-illustration.jpg';
 import birdIllustration from '@/assets/projects/bird-illustration.jpg';
 import goldenJewelry from '@/assets/projects/golden-jewelry.jpg';
@@ -16,6 +14,7 @@ import forma1 from '@/assets/projects/forma-1.jpg';
 import forma2 from '@/assets/projects/forma-2.jpg';
 import forma3 from '@/assets/projects/forma-3.jpg';
 import forma4 from '@/assets/projects/forma-4.jpg';
+import awansHero from '@/assets/projects/awans-hero.jpg';
 import type { Localized } from '@/i18n/translations';
 
 export interface Project {
