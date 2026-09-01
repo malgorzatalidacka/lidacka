@@ -27,6 +27,17 @@ export const translations = {
     "passion.intro":
       "Zbiór inspiracji, zainteresowań i drobnych historii spoza pracy zawodowej — ruch, rzemiosło, książki, obserwacje i eksperymenty, które wracają potem w moich projektach edukacyjnych.",
     "passion.outro": "Kolekcja rośnie — nowe wpisy dochodzą, gdy coś mnie zaciekawi.",
+    "passion.featureTag": "Esej wizualny",
+    "passion.featureTitle": "Action for Happiness",
+    "passion.featureBody":
+      "Osobista opowieść o idei, która zmieniła moje podejście do projektowania: dobrostan nie jest dodatkiem do nauki, tylko jej warunkiem.",
+    "passion.featureCta": "Przeczytaj esej",
+    "happiness.keysLabel": "Sześć kluczy",
+    "happiness.keysTitle": "GREAT DREAM — i co z tego robię w projektowaniu",
+    "happiness.keysIntro":
+      "Action for Happiness porządkuje dobrostan w kilka prostych obszarów. Poniżej moja własna wersja: każdy obszar plus decyzja projektowa, która z niego wynika.",
+    "happiness.back": "Wróć do inspiracji",
+
 
 
     "home.intro":
