@@ -3,6 +3,7 @@ import ScrollRevealText from "@/components/ScrollRevealText";
 import { passions, PassionEntry } from "@/data/passions";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const PassionCard = ({ entry, index }: { entry: PassionEntry; index: number }) => {
@@ -97,6 +98,34 @@ const PassionPlay = () => {
           {t("passion.title")}
         </ScrollRevealText>
         <p className="text-body text-muted-foreground max-w-2xl mt-8">{t("passion.intro")}</p>
+      </section>
+
+      <section className="container-editorial pb-6 md:pb-10">
+        <Link
+          to="/passion-play/action-for-happiness"
+          className="group block relative overflow-hidden border border-border bg-card p-6 md:p-10 lg:p-12 transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_hsl(var(--foreground)/0.35)]"
+        >
+          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
+            <div>
+              <span className="label-uppercase text-muted-foreground text-[10px] md:text-xs">
+                {t("passion.featureTag")}
+              </span>
+              <h2 className="heading-medium mt-4 text-balance">{t("passion.featureTitle")}</h2>
+              <p className="text-muted-foreground mt-4 max-w-lg">{t("passion.featureBody")}</p>
+              <span className="link-underline label-uppercase inline-block mt-6 md:mt-8">
+                {t("passion.featureCta")}
+              </span>
+            </div>
+            <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+              <img
+                src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&h=750&fit=crop"
+                alt={t("passion.featureTitle")}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+          </div>
+        </Link>
       </section>
 
       <section className="container-editorial pb-24 md:pb-32">
