@@ -33,25 +33,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "lumina-brand",
-    title: "Lumina_",
-    client: "Lumina Technologies",
+    id: "fundacja-tab",
+    title: "Fundacja TAB_",
+    client: "Fundacja TAB",
     category: {
-      pl: "Identyfikacja marki",
-      en: "Brand Identity",
+      pl: "Learning Design · Projekty społeczne · Edukacja",
+      en: "Learning Design · Social Projects · Education",
     },
-    year: "2024",
+    year: "2022–2024",
     description: {
-      pl: "Kompleksowy system identyfikacji wizualnej dla firmy nowej generacji zajmującej się zrównoważonymi technologiami i rozwiązaniami z zakresu energii odnawialnej.",
-      en: "A comprehensive brand identity system for a next-generation sustainable technology company focused on renewable energy solutions.",
+      pl: "Projekty edukacyjne i społeczne realizowane przez Fundację TAB — warsztaty, programy rozwojowe i materiały edukacyjne tworzone z myślą o dzieciach, młodzieży i osobach dorosłych wspierających ich rozwój.",
+      en: "Educational and social projects delivered by Fundacja TAB — workshops, development programmes and learning materials created for children, young people and the adults who support their growth.",
     },
     challenge: {
-      pl: "Lumina potrzebowała identyfikacji wizualnej, która komunikowałaby innowacyjne podejście do zrównoważonego rozwoju i wyróżniałaby się na zatłoczonym rynku zielonych technologii.",
-      en: "Lumina needed a visual identity that would communicate their innovative approach to sustainability while standing out in a crowded market of green tech companies.",
+      pl: "Działania fundacji obejmowały bardzo różne grupy odbiorców i tematy. Wyzwaniem było stworzenie spójnego podejścia edukacyjnego, które daje strukturę, a jednocześnie zostawia przestrzeń na potrzeby konkretnej grupy.",
+      en: "The foundation's work covered very different audiences and topics. The challenge was to create a coherent educational approach that provides structure while leaving room for the needs of each specific group.",
     },
     solution: {
-      pl: "Stworzyliśmy dynamiczny system identyfikacji oparty na koncepcji światła i transformacji energii. Język wizualny wykorzystuje formy geometryczne, które zmieniają się i adaptują, odzwierciedlając elastyczne podejście firmy.",
-      en: "We developed a dynamic identity system built around the concept of light and energy transformation. The visual language uses geometric forms that shift and adapt, representing the company's flexible approach to energy solutions.",
+      pl: "Zaprojektowałam powtarzalne ramy scenariuszy: jasny cel, aktywności oparte na doświadczeniu, refleksja i materiały do samodzielnej pracy. Dzięki temu każdy warsztat można było szybko dopasować do grupy bez utraty jakości merytorycznej.",
+      en: "I designed a repeatable scenario framework: a clear goal, experience-based activities, reflection and take-away materials. This allowed each workshop to be adapted quickly to a group without losing pedagogical quality.",
     },
     image: graffitiface,
     images: [graffitiface, flowersPainting, watercolorFlowers],
