@@ -83,25 +83,25 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "haven-wellness",
-    title: "Haven_",
-    client: "Haven Wellness",
+    id: "open-future",
+    title: "Open Future_",
+    client: "Open Future",
     category: {
-      pl: "Strategia marki",
-      en: "Brand Strategy",
+      pl: "Learning Design · Program rozwojowy · Przyszłość pracy",
+      en: "Learning Design · Development Programme · Future of Work",
     },
     year: "2023",
     description: {
-      pl: "Strategia marki i identyfikacja wizualna dla luksusowego ośrodka wellness skupionego na cyfrowym detoksie i uważnym życiu.",
-      en: "Brand strategy and visual identity for a luxury wellness retreat focused on digital detox and mindful living.",
+      pl: "Program rozwojowy i warsztaty dla młodych ludzi przygotowujących się do przyszłości pracy. Open Future łączy rozwój kompetencji przyszłości, projektowanie ścieżek kariery i narzędzia uczenia się przez całe życie.",
+      en: "A development programme and workshops for young people preparing for the future of work. Open Future combines future-ready skills, career-path design and lifelong learning tools.",
     },
     challenge: {
-      pl: "Stworzyć identyfikację, która jest jednocześnie luksusowa i przyziemna, unikając klisz typowych dla marek wellness.",
-      en: "Create an identity that feels both luxurious and grounded, avoiding the clichés often associated with wellness brands.",
+      pl: "Młodzi uczestnicy mieli różne doświadczenia edukacyjne i niepewność co do własnych możliwości. Wyzwaniem było stworzenie przestrzeni, w której każdy czuje się gotów eksplorować swoje mocne strony i próbować nowych ról.",
+      en: "Participants came with varied educational experiences and uncertainty about their own potential. The challenge was to create a space where everyone felt ready to explore their strengths and try on new roles.",
     },
     solution: {
-      pl: "Zbudowaliśmy markę opartą na japońskich koncepcjach Ma (przestrzeń negatywna) i Wabi-sabi (piękno niedoskonałości), z organicznymi teksturami i stonowaną, ziemistą paletą.",
-      en: "We developed a brand rooted in Japanese concepts of Ma (negative space) and Wabi-sabi (beauty in imperfection), using organic textures and a muted, earthy palette.",
+      pl: "Zaprojektowałam cykl warsztatów oparty na refleksji, prototypowaniu i realnych sytuacjach. Uczestnicy odkrywali swoje kompetencje, tworzyli osobiste mapy rozwoju i ćwiczyli podejmowanie decyzji w warunkach zmiany.",
+      en: "I designed a workshop cycle built on reflection, prototyping and real-life scenarios. Participants discovered their competencies, created personal development maps and practised decision-making in conditions of change.",
     },
     image: flowersPainting,
     images: [flowersPainting, birdIllustration, goldenJewelry],
