@@ -34,7 +34,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "fundacja-tab",
-    title: "Fundacja TAB_",
+    title: "Instrukcja Obsługi Człowieka_",
     client: "Fundacja TAB",
     category: {
       pl: "Learning Design · Projekty społeczne · Edukacja",
