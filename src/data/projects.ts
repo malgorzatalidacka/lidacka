@@ -156,25 +156,25 @@ export const projects: Project[] = [
     images: [palmDigital, varoomMagazine, goldenJewelry]
   },
   {
-    id: "forma-apparel",
-    title: "Forma_",
-    client: "Forma Apparel",
+    id: "centrum-rozwoju-bez-stresu",
+    title: "Centrum rozwoju bez stresu_",
+    client: "Własna działalność",
     category: {
-      pl: "Identyfikacja marki",
-      en: "Brand Identity",
+      pl: "Learning Design · Rozwój osobisty · Wellbeing",
+      en: "Learning Design · Personal Development · Wellbeing",
     },
-    year: "2022",
+    year: "2023–2024",
     description: {
-      pl: "Kompletna identyfikacja marki dla zrównoważonej marki modowej opartej na zasadach projektowania cyrkularnego i etycznej produkcji.",
-      en: "Complete brand identity for a sustainable fashion label committed to circular design principles and ethical manufacturing.",
+      pl: "Centrum Rozwoju Bez Stresu to moja autorska przestrzeń edukacyjna, w której projektuję doświadczenia rozwojowe bez presji i pośpiechu. Łączę wiedzę o uczeniu się, psychologii oraz wellbeing, tworząc warsztaty, programy i materiały, które wspierają ludzi w zmianie w ich własnym tempie.",
+      en: "Centrum Rozwoju Bez Stresu is my own educational space where I design development experiences free from pressure and rush. I combine knowledge of learning, psychology and wellbeing to create workshops, programmes and materials that support people in changing at their own pace.",
     },
     challenge: {
-      pl: "Ustawić Formę jako poważną alternatywę dla fast fashion, bez moralizowania i bez rezygnacji ze stylu na rzecz ekologii.",
-      en: "Position Forma as a serious alternative to fast fashion without appearing preachy or sacrificing style for sustainability.",
+      pl: "Wiele osób chce się rozwijać, ale spotykają je programy oparte na presji, szybkich efektach i porównywaniu się do innych. Wyzwaniem było stworzenie formatu, który motywuje do działania, jednocześnie szanując potrzeby, tempo i ograniczenia uczestników.",
+      en: "Many people want to grow, but they encounter programmes built on pressure, quick results and comparison with others. The challenge was to create a format that motivates action while respecting participants' needs, pace and limits.",
     },
     solution: {
-      pl: "Minimalistyczna, systemowa identyfikacja skupiona na rzemiośle i materiałach, z opakowaniami zaprojektowanymi do ponownego użycia i recyklingu.",
-      en: "A minimal, system-based identity that puts the focus on craftsmanship and materials, with packaging designed for reuse and eventual recycling.",
+      pl: "Zaprojektowałam koncepcję Centrum opartą na małych krokach, refleksji i budowaniu nawyków. Każdy program ma jasną strukturę, przestrzeń na pomyłki i cele dopasowane do uczestnika, a nie odwrotne. Do tego ciepła estetyka i język zachęty zamiast wymogu.",
+      en: "I designed the Centre concept around small steps, reflection and habit-building. Every programme has a clear structure, room for mistakes and goals adapted to the participant, not the other way around. Plus a warm aesthetic and language of encouragement instead of demands.",
     },
     image: forma1,
     images: [forma1, forma2, forma3, forma4]
