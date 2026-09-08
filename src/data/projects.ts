@@ -132,28 +132,28 @@ export const projects: Project[] = [
     images: [catIllustration, birdIllustration, flowersPainting]
   },
   {
-    id: "echo-magazine",
-    title: "Echo_",
-    client: "Echo Publications",
+    id: "make-your-vote",
+    title: "Make your vote!_",
+    client: "FORMAC S.A.",
     category: {
-      pl: "Projekt wydawniczy",
-      en: "Editorial Design",
+      pl: "Learning Design · Edukacja obywatelska · Kampania społeczna",
+      en: "Learning Design · Civic Education · Social Campaign",
     },
     year: "2023",
     description: {
-      pl: "Kierownictwo artystyczne i projekt kwartalnika drukowanego badającego styk kultury, technologii i designu.",
-      en: "Art direction and editorial design for a quarterly print magazine exploring the intersection of culture, technology, and design.",
+      pl: "Kampania edukacyjna i program warsztatowy dla FORMAC S.A., zachęcający młodych ludzi do aktywnego udziału w wyborach i życiu publicznym. Projekt łączy edukację obywatelską, narzędzia krytycznego myślenia i praktyczne scenariusze rozmów o demokracji.",
+      en: "An educational campaign and workshop programme for FORMAC S.A. encouraging young people to take an active part in elections and public life. The project combines civic education, critical thinking tools and practical scenarios for conversations about democracy.",
     },
     challenge: {
-      pl: "Stworzyć wyrazisty głos wydawniczy, który połączy czytelników wychowanych w cyfrze z dotykowym doświadczeniem druku.",
-      en: "Create a distinctive editorial voice that could bridge the gap between digital-native readers and the tactile experience of print.",
+      pl: "Młode osoby często postrzegają politykę jako odległą i nieprzystępną. Wyzwaniem było stworzenie formatu, który tłumaczy znaczenie głosu, nie moralizując i nie narzucając gotowych opinii.",
+      en: "Young people often see politics as distant and inaccessible. The challenge was to create a format that explains the meaning of a vote without preaching or imposing ready-made opinions.",
     },
     solution: {
-      pl: "Modułowy system siatki pozwalający na dynamiczne układy przy zachowaniu spójności, połączony z odważną typografią nagradzającą powolną, uważną lekturę.",
-      en: "A modular grid system that allows for dynamic layouts while maintaining consistency, combined with a bold typographic approach that rewards slow, deliberate reading.",
+      pl: "Zaprojektowałam warsztaty oparte na realnych dylematach, symulacjach wyborczych i analizie informacji. Materiały łączą teorię z praktyką, pomagając uczestnikom odkryć własne wartości i podejmować świadome decyzje.",
+      en: "I designed workshops based on real dilemmas, election simulations and information analysis. The materials combine theory with practice, helping participants discover their own values and make informed decisions.",
     },
-    image: echo1,
-    images: [echo1, echo2, echo3, echo4]
+    image: palmDigital,
+    images: [palmDigital, varoomMagazine, goldenJewelry]
   },
   {
     id: "forma-apparel",
