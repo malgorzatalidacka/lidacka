@@ -84,7 +84,7 @@ export const projects: Project[] = [
   },
   {
     id: "open-future",
-    title: "Open Future_",
+    title: "Nasz nowy świat_",
     client: "Open Future",
     category: {
       pl: "Learning Design · Program rozwojowy · Przyszłość pracy",
