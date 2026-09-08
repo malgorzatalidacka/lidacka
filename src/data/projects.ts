@@ -108,28 +108,28 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "nova-digital",
-    title: "Nova Digital_",
-    client: "Nova Ventures",
+    id: "silniejsza-fundacja",
+    title: "Silniejsza Fundacja - lepsza pomoc szczeniakom i kociakom_",
+    client: "Fundacja TAB",
     category: {
-      pl: "Produkt cyfrowy",
-      en: "Digital Product",
+      pl: "Learning Design · Projekty społeczne · Ochrona zwierząt",
+      en: "Learning Design · Social Projects · Animal Welfare",
     },
     year: "2023",
     description: {
-      pl: "Projekt produktu cyfrowego i identyfikacji marki dla funduszu venture capital inwestującego we wczesne startupy technologiczne.",
-      en: "Digital product design and brand identity for a venture capital firm investing in early-stage technology startups.",
+      pl: "Program edukacyjny i kampania społeczna dla Fundacji TAB, wspierająca opiekunów małych zwierząt oraz osoby pracujące w schroniskach. Celem jest budowanie wiedzy, umiejętności i sieci wsparcia, które poprawiają jakość pomocy szczeniakom i kociakom.",
+      en: "An educational programme and social campaign for Fundacja TAB supporting caregivers of young animals and shelter workers. The goal is to build knowledge, skills and a support network that improves the quality of help for puppies and kittens.",
     },
     challenge: {
-      pl: "Nova potrzebowała obecności cyfrowej, która przyciągnie founderów, zachowując powagę oczekiwaną przez inwestorów instytucjonalnych.",
-      en: "Nova needed a digital presence that would appeal to founders while maintaining the gravitas expected by institutional investors.",
+      pl: "Wiele osób pomagających zwierzętom działa spontanicznie, bez dostępu do sprawdzonych metod i wiedzy eksperckiej. Wyzwaniem było stworzenie materiałów, które są praktyczne, empatyczne i łatwe do wykorzystania w codziennej pracy.",
+      en: "Many people helping animals act spontaneously, without access to proven methods or expert knowledge. The challenge was to create materials that are practical, empathetic and easy to use in everyday work.",
     },
     solution: {
-      pl: "Odważna, typograficzna identyfikacja wraz z dopracowaną platformą cyfrową, która stawia treść i storytelling ponad typowy marketing funduszy VC.",
-      en: "A bold, typographic-led identity with a sophisticated digital platform that prioritizes content and storytelling over traditional VC marketing approaches.",
+      pl: "Zaprojektowałam ścieżkę edukacyjną łączącą warsztaty, scenariusze zajęć i materiały do samodzielnej pracy. Treści oparte na wiedzy weterynaryjnej i behawioralnej zostały przekute w przystępne narzędzia, które wzmacniają kompetencje opiekunów.",
+      en: "I designed a learning journey combining workshops, session scenarios and self-study materials. Veterinary and behavioural knowledge was turned into accessible tools that strengthen caregivers' competencies.",
     },
-    image: palmDigital,
-    images: [palmDigital, varoomMagazine, catIllustration]
+    image: catIllustration,
+    images: [catIllustration, birdIllustration, flowersPainting]
   },
   {
     id: "echo-magazine",
