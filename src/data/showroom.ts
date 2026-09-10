@@ -776,7 +776,7 @@ export const sessionLabScenario: SessionLabScenario = {
       title: { pl: "Domknięcie i jedna rzecz do spróbowania", en: "Closing and one thing to try" },
       method: { pl: "Każdy zapisuje jeden mały krok, który zrobi w domu. Wolontariusze dzielą się z grupą.", en: "Everyone writes one small step they will take at home. Volunteers share with the group." },
       purpose: { pl: "Przeniesienie wniosku z sali do codziennego życia.", en: "Carrying the insight from the room into everyday life." },
-      materials: { pl: "Karteczki „Jedna rzecz"", en: "\"One thing\" cards" },
+      materials: { pl: "Karteczki \"Jedna rzecz\"", en: "\"One thing\" cards" },
     },
   ],
   embedUrl: "",
