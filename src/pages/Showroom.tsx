@@ -244,6 +244,69 @@ const Showroom = () => {
         </Reveal>
       </section>
 
+      {/* PLAN — SESSIONLAB SCENARIO */}
+      <section className="container-editorial pb-24 md:pb-32">
+        <Reveal>
+          <SectionHead
+            id="plan"
+            kicker="PLAN"
+            title={tl(sessionLabScenario.title)}
+            intro={tl(sessionLabScenario.intro)}
+          />
+
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Meta + embed placeholder */}
+            <div className="lg:col-span-1 space-y-6">
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+                <h3 className="heading-small">{pl ? "O scenariuszu" : "About the scenario"}</h3>
+                <dl className="mt-5 space-y-4 text-sm">
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Czas" : "Duration"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.duration)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Dla kogo" : "Audience"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.audience)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Liczba uczestników" : "Group size"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.groupSize)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Cel" : "Goal"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.goal)}</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div className="rounded-2xl border border-dashed border-border bg-secondary/40 p-6 text-center">
+                <span className="text-3xl" aria-hidden>📋</span>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  {pl
+                    ? "Tutaj pojawi się podgląd lub osadzenie scenariusza z SessionLab."
+                    : "A preview or embed of the SessionLab scenario will appear here."}
+                </p>
+                {sessionLabScenario.externalUrl && (
+                  <a
+                    href={sessionLabScenario.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 label-uppercase link-underline hover:opacity-70 transition-opacity"
+                  >
+                    {pl ? "Otwórz w SessionLab" : "Open in SessionLab"} →
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Blocks */}
+            <div className="lg:col-span-2">
+              <SessionLabBlocks />
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       {/* USE — TOOLKIT */}
       <section className="bg-secondary/60 py-20 md:py-28">
         <div className="container-editorial">
