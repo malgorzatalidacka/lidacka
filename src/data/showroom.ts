@@ -119,6 +119,17 @@ export const showroomTiles: ShowroomTile[] = [
     target: "explore",
   },
   {
+    id: "plan",
+    kicker: "PLAN",
+    glyph: "📋",
+    title: { pl: "Zobacz scenariusz w SessionLab", en: "See a SessionLab scenario" },
+    body: {
+      pl: "Jak planuję przebieg warsztatu — czas, cel, metoda i materiały w jednym miejscu.",
+      en: "How I plan a workshop flow — time, purpose, method and materials in one place.",
+    },
+    target: "plan",
+  },
+  {
     id: "use",
     kicker: "USE",
     glyph: "🧰",
