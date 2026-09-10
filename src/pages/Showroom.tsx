@@ -70,6 +70,65 @@ const SectionHead = ({
   </div>
 );
 
+const SessionLabBlockCard = ({
+  block,
+  index,
+  isOpen,
+  onToggle,
+}: {
+  block: SessionLabBlock;
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) => {
+  const { tl } = useLanguage();
+  return (
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
+      <button
+        type="button"
+        onClick={onToggle}
+        className="w-full flex items-start gap-4 p-5 md:p-6 text-left transition-colors hover:bg-secondary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        aria-expanded={isOpen}
+      >
+        <span className="label-uppercase text-accent shrink-0 mt-1">{block.time}</span>
+        <span className="heading-small block flex-1">{tl(block.title)}</span>
+        <span
+          className={cn(
+            "text-muted-foreground transition-transform duration-300 shrink-0",
+            isOpen && "rotate-180"
+          )}
+          aria-hidden
+        >
+          ↓
+        </span>
+      </button>
+      <div
+        className={cn(
+          "grid transition-all duration-500 motion-reduce:transition-none",
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        )}
+      >
+        <div className="overflow-hidden">
+          <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 md:pt-0 space-y-3 border-t border-border/60">
+            <p className="text-body text-muted-foreground pt-4">
+              <span className="text-foreground font-medium">{index + 1 < 9 ? `0${index + 1}` : index + 1}. </span>
+              {tl(block.method)}
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <span className="text-accent">→</span> {tl(block.purpose)}
+            </p>
+            {block.materials && (
+              <p className="text-sm text-muted-foreground">
+                <span className="text-accent">🧰</span> {tl(block.materials)}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Showroom = () => {
   const { tl, t, language } = useLanguage();
   const pl = language === "pl";
