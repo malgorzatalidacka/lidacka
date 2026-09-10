@@ -15,8 +15,8 @@ import forma2 from '@/assets/projects/forma-2.jpg';
 import forma3 from '@/assets/projects/forma-3.jpg';
 import forma4 from '@/assets/projects/forma-4.jpg';
 import awansHero from '@/assets/projects/awans-hero.jpg';
-import parentClubsWorkshop from '@/assets/projects/parent-clubs-workshop.jpg';
-import ehfEuro2026 from '@/assets/projects/ehf-euro-2026.jpg';
+import deerForest from '@/assets/projects/deer-forest.jpg';
+import holographicBust from '@/assets/projects/holographic-bust.jpg';
 import type { Localized } from '@/i18n/translations';
 
 export interface Project {
@@ -105,8 +105,8 @@ export const projects: Project[] = [
       pl: "Zaprojektowałam cykl warsztatów w formacie otwartego warsztatu pracy z czterema segregatorami tematycznymi. Każde spotkanie łączyło teorię, praktyczne ćwiczenia i refleksję, dając rodzicom konkretne narzędzia i poczucie wspólnoty.",
       en: "I designed a cycle of workshops in an open workspace format with four thematic binders. Each session combined theory, practical exercises and reflection, giving parents concrete tools and a sense of community.",
     },
-    image: parentClubsWorkshop,
-    images: [parentClubsWorkshop, flowersPainting, watercolorFlowers]
+    image: holographicBust,
+    images: [holographicBust, flowersPainting, watercolorFlowers]
   },
   {
     id: "open-future",
@@ -226,8 +226,8 @@ export const projects: Project[] = [
       pl: "Zbudowałam spójny system przygotowań oparty na jasnych procedurach, regularnej komunikacji i narzędziach wspierających decyzje w czasie rzeczywistym. Wdrożenie elementów VR pozwoliło na immersyjne zapoznanie się z halą i procedurami jeszcze przed przyjazdem na miejsce, co usprawniło współpracę i zmniejszyło niepewność zespołu.",
       en: "I built a coherent preparation system based on clear procedures, regular communication and real-time decision-support tools. Introducing VR elements allowed the team to immerse themselves in the arena and procedures before arrival, smoothing collaboration and reducing uncertainty.",
     },
-    image: ehfEuro2026,
-    images: [ehfEuro2026, awansHero, forma1]
+    image: deerForest,
+    images: [deerForest, awansHero, forma1]
   }
 ];
 
