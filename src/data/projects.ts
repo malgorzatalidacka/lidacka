@@ -15,6 +15,8 @@ import forma2 from '@/assets/projects/forma-2.jpg';
 import forma3 from '@/assets/projects/forma-3.jpg';
 import forma4 from '@/assets/projects/forma-4.jpg';
 import awansHero from '@/assets/projects/awans-hero.jpg';
+import deerForest from '@/assets/projects/deer-forest.jpg';
+import holographicBust from '@/assets/projects/holographic-bust.jpg';
 import type { Localized } from '@/i18n/translations';
 
 export interface Project {
@@ -81,6 +83,30 @@ export const projects: Project[] = [
     image: awansHero,
     images: [awansHero],
     featured: true
+  },
+  {
+    id: "kluby-rodzicow",
+    title: "Współpraca z Klubami Rodziców w Krakowie_",
+    client: "Kluby Rodziców w Krakowie",
+    category: {
+      pl: "Learning Design · Warsztaty psychoedukacyjne · Rodzicielstwo",
+      en: "Learning Design · Psychoeducational Workshops · Parenting",
+    },
+    year: "2023–2024",
+    description: {
+      pl: "Współpraca z krakowskimi Klubami Rodziców — projektowanie i prowadzenie warsztatów psychoedukacyjnych wspierających rodziców w codziennych wyzwaniach wychowawczych. Każde spotkanie łączyło refleksję, praktyczne narzędzia i budowanie wspólnoty.",
+      en: "Collaboration with Parent Clubs in Kraków — designing and facilitating psychoeducational workshops that support parents in everyday upbringing challenges. Each session combined reflection, practical tools and community building.",
+    },
+    challenge: {
+      pl: "Rodzice spotykają się z różnymi trudnościami wychowawczymi, często czując się samotni w swoich doświadczeniach. Potrzebowali przestrzeni, w której mogą rozmawiać otwarcie, uczyć się od siebie i próbować nowych podejść bez presji.",
+      en: "Parents face diverse upbringing challenges and often feel alone in their experiences. They needed a space to talk openly, learn from each other and try new approaches without pressure.",
+    },
+    solution: {
+      pl: "Zaprojektowałam cykl warsztatów w formacie otwartego warsztatu pracy z czterema segregatorami tematycznymi. Każde spotkanie łączyło teorię, praktyczne ćwiczenia i refleksję, dając rodzicom konkretne narzędzia i poczucie wspólnoty.",
+      en: "I designed a cycle of workshops in an open workspace format with four thematic binders. Each session combined theory, practical exercises and reflection, giving parents concrete tools and a sense of community.",
+    },
+    image: holographicBust,
+    images: [holographicBust, flowersPainting, watercolorFlowers]
   },
   {
     id: "open-future",
@@ -178,6 +204,30 @@ export const projects: Project[] = [
     },
     image: forma1,
     images: [forma1, forma2, forma3, forma4]
+  },
+  {
+    id: "ehf-euro-2026",
+    title: "Women's EHF EURO 2026_",
+    client: "European Handball Federation",
+    category: {
+      pl: "Learning Design · Zarządzanie wydarzeniem · Współpraca międzynarodowa · VR",
+      en: "Learning Design · Event Management · International Cooperation · VR",
+    },
+    year: "2026",
+    description: {
+      pl: "Projekt prowadzenia Mistrzostw Europy w Piłce Ręcznej Kobiet 2026 — wydarzenia sportowego na najwyższym poziomie, które wymagało profesjonalizmu w każdym detalu, od przygotowania fizycznego i mentalnego, przez koordynację międzynarodowego zespołu, po wdrożenie nowoczesnych technologii VR.",
+      en: "Leading the Women's EHF EURO 2026 handball championship — a top-tier sports event that demanded professionalism in every detail, from physical and mental preparation, through coordinating an international team, to implementing modern VR technologies.",
+    },
+    challenge: {
+      pl: "Organizacja zawodów z udziałem ekip z całej Europy wymagała połączenia doskonałości sportowej, logistyki, komunikacji wielojęzycznej i gotowości psychicznej. Wyzwaniem było stworzenie środowiska, w którym ludzie z różnych kultur i specjalizacji współpracują płynnie pod ogromną presją wyniku.",
+      en: "Organising a tournament with teams from across Europe required combining sporting excellence, logistics, multilingual communication and mental readiness. The challenge was to create an environment where people from different cultures and specialisations work smoothly under intense performance pressure.",
+    },
+    solution: {
+      pl: "Zbudowałam spójny system przygotowań oparty na jasnych procedurach, regularnej komunikacji i narzędziach wspierających decyzje w czasie rzeczywistym. Wdrożenie elementów VR pozwoliło na immersyjne zapoznanie się z halą i procedurami jeszcze przed przyjazdem na miejsce, co usprawniło współpracę i zmniejszyło niepewność zespołu.",
+      en: "I built a coherent preparation system based on clear procedures, regular communication and real-time decision-support tools. Introducing VR elements allowed the team to immerse themselves in the arena and procedures before arrival, smoothing collaboration and reducing uncertainty.",
+    },
+    image: deerForest,
+    images: [deerForest, awansHero, forma1]
   }
 ];
 

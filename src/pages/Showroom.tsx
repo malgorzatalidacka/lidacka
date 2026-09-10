@@ -12,6 +12,8 @@ import {
   presentationProjects,
   showroomHeroChips,
   showroomTiles,
+  sessionLabScenario,
+  type SessionLabBlock,
 } from "@/data/showroom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { cn } from "@/lib/utils";
@@ -67,6 +69,94 @@ const SectionHead = ({
     {intro && <p className="text-body text-muted-foreground mt-5">{intro}</p>}
   </div>
 );
+
+const SessionLabBlockCard = ({
+  block,
+  index,
+  isOpen,
+  onToggle,
+}: {
+  block: SessionLabBlock;
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) => {
+  const { tl } = useLanguage();
+  return (
+    <div className="rounded-2xl border border-border bg-card overflow-hidden">
+      <button
+        type="button"
+        onClick={onToggle}
+        className="w-full flex items-start gap-4 p-5 md:p-6 text-left transition-colors hover:bg-secondary/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        aria-expanded={isOpen}
+      >
+        <span className="label-uppercase text-accent shrink-0 mt-1">{block.time}</span>
+        <span className="heading-small block flex-1">{tl(block.title)}</span>
+        <span
+          className={cn(
+            "text-muted-foreground transition-transform duration-300 shrink-0",
+            isOpen && "rotate-180"
+          )}
+          aria-hidden
+        >
+          ↓
+        </span>
+      </button>
+      <div
+        className={cn(
+          "grid transition-all duration-500 motion-reduce:transition-none",
+          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        )}
+      >
+        <div className="overflow-hidden">
+          <div className="px-5 pb-5 md:px-6 md:pb-6 pt-0 md:pt-0 space-y-3 border-t border-border/60">
+            <p className="text-body text-muted-foreground pt-4">
+              <span className="text-foreground font-medium">{index + 1 < 9 ? `0${index + 1}` : index + 1}. </span>
+              {tl(block.method)}
+            </p>
+            <p className="text-sm text-muted-foreground">
+              <span className="text-accent">→</span> {tl(block.purpose)}
+            </p>
+            {block.materials && (
+              <p className="text-sm text-muted-foreground">
+                <span className="text-accent">🧰</span> {tl(block.materials)}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SessionLabBlocks = () => {
+  const [openId, setOpenId] = useState<string | null>(sessionLabScenario.blocks[0]?.id ?? null);
+  const { tl } = useLanguage();
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="heading-small">{pl ? "Przebieg warsztatu" : "Workshop flow"}</h3>
+        <span className="label-uppercase text-muted-foreground">
+          {sessionLabScenario.blocks.length} {pl ? "bloków" : "blocks"}
+        </span>
+      </div>
+      {sessionLabScenario.blocks.map((block, index) => (
+        <SessionLabBlockCard
+          key={block.id}
+          block={block}
+          index={index}
+          isOpen={openId === block.id}
+          onToggle={() => setOpenId(openId === block.id ? null : block.id)}
+        />
+      ))}
+      <p className="text-sm text-muted-foreground pt-2">
+        {pl
+          ? "Każdy blok ma swój czas, metodę i cel dydaktyczny. Tak wygląda pełny plan zajęć w SessionLab."
+          : "Each block has its own time, method and learning purpose. This is what a full SessionLab plan looks like."}
+      </p>
+    </div>
+  );
+};
 
 const Showroom = () => {
   const { tl, t, language } = useLanguage();
@@ -179,6 +269,69 @@ const Showroom = () => {
                 actionLabel={pl ? "Zwiedź prezentację" : "Explore the presentation"}
               />
             ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* PLAN — SESSIONLAB SCENARIO */}
+      <section className="container-editorial pb-24 md:pb-32">
+        <Reveal>
+          <SectionHead
+            id="plan"
+            kicker="PLAN"
+            title={tl(sessionLabScenario.title)}
+            intro={tl(sessionLabScenario.intro)}
+          />
+
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+            {/* Meta + embed placeholder */}
+            <div className="lg:col-span-1 space-y-6">
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+                <h3 className="heading-small">{pl ? "O scenariuszu" : "About the scenario"}</h3>
+                <dl className="mt-5 space-y-4 text-sm">
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Czas" : "Duration"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.duration)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Dla kogo" : "Audience"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.audience)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Liczba uczestników" : "Group size"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.groupSize)}</dd>
+                  </div>
+                  <div>
+                    <dt className="label-uppercase text-muted-foreground">{pl ? "Cel" : "Goal"}</dt>
+                    <dd className="mt-1 text-foreground">{tl(sessionLabScenario.goal)}</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div className="rounded-2xl border border-dashed border-border bg-secondary/40 p-6 text-center">
+                <span className="text-3xl" aria-hidden>📋</span>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  {pl
+                    ? "Tutaj pojawi się podgląd lub osadzenie scenariusza z SessionLab."
+                    : "A preview or embed of the SessionLab scenario will appear here."}
+                </p>
+                {sessionLabScenario.externalUrl && (
+                  <a
+                    href={sessionLabScenario.externalUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 label-uppercase link-underline hover:opacity-70 transition-opacity"
+                  >
+                    {pl ? "Otwórz w SessionLab" : "Open in SessionLab"} →
+                  </a>
+                )}
+              </div>
+            </div>
+
+            {/* Blocks */}
+            <div className="lg:col-span-2">
+              <SessionLabBlocks />
+            </div>
           </div>
         </Reveal>
       </section>
