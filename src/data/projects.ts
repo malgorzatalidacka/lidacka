@@ -85,6 +85,30 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: "kluby-rodzicow",
+    title: "Współpraca z Klubami Rodziców w Krakowie_",
+    client: "Kluby Rodziców w Krakowie",
+    category: {
+      pl: "Learning Design · Warsztaty psychoedukacyjne · Rodzicielstwo",
+      en: "Learning Design · Psychoeducational Workshops · Parenting",
+    },
+    year: "2023–2024",
+    description: {
+      pl: "Współpraca z krakowskimi Klubami Rodziców — projektowanie i prowadzenie warsztatów psychoedukacyjnych wspierających rodziców w codziennych wyzwaniach wychowawczych. Każde spotkanie łączyło refleksję, praktyczne narzędzia i budowanie wspólnoty.",
+      en: "Collaboration with Parent Clubs in Kraków — designing and facilitating psychoeducational workshops that support parents in everyday upbringing challenges. Each session combined reflection, practical tools and community building.",
+    },
+    challenge: {
+      pl: "Rodzice spotykają się z różnymi trudnościami wychowawczymi, często czując się samotni w swoich doświadczeniach. Potrzebowali przestrzeni, w której mogą rozmawiać otwarcie, uczyć się od siebie i próbować nowych podejść bez presji.",
+      en: "Parents face diverse upbringing challenges and often feel alone in their experiences. They needed a space to talk openly, learn from each other and try new approaches without pressure.",
+    },
+    solution: {
+      pl: "Zaprojektowałam cykl warsztatów w formacie otwartego warsztatu pracy z czterema segregatorami tematycznymi. Każde spotkanie łączyło teorię, praktyczne ćwiczenia i refleksję, dając rodzicom konkretne narzędzia i poczucie wspólnoty.",
+      en: "I designed a cycle of workshops in an open workspace format with four thematic binders. Each session combined theory, practical exercises and reflection, giving parents concrete tools and a sense of community.",
+    },
+    image: parentClubsWorkshop,
+    images: [parentClubsWorkshop, flowersPainting, watercolorFlowers]
+  },
+  {
     id: "open-future",
     title: "Nasz nowy świat_",
     client: "Open Future",
