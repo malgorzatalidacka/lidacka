@@ -697,3 +697,88 @@ export const playgroundItems: PlaygroundItem[] = [
     body: { pl: "Zestaw ćwiczeń i materiałów z Klubów Rodziców.", en: "A set of exercises and materials from the Parent Clubs." },
   },
 ];
+
+export interface SessionLabBlock {
+  id: string;
+  time: string;
+  title: Localized;
+  method: Localized;
+  purpose: Localized;
+  materials?: Localized;
+}
+
+export interface SessionLabScenario {
+  id: string;
+  title: Localized;
+  intro: Localized;
+  duration: Localized;
+  audience: Localized;
+  groupSize: Localized;
+  goal: Localized;
+  blocks: SessionLabBlock[];
+  embedUrl?: string;
+  externalUrl?: string;
+}
+
+export const sessionLabScenario: SessionLabScenario = {
+  id: "parent-workshop",
+  title: {
+    pl: "Warsztat dla rodziców: Granice i emocje_",
+    en: "Parent workshop: Boundaries and emotions_",
+  },
+  intro: {
+    pl: "Scenariusz przygotowany w SessionLab dla jednego z krakowskich Klubów Rodziców. Łączy krótkie ćwiczenia, refleksję w parach i wspólne omówienie, żeby rodzice wyszli z konkretnymi pomysłami, a nie tylko teorii.",
+    en: "A scenario built in SessionLab for one of Kraków's Parent Clubs. It mixes short exercises, pair reflection and group debrief so parents leave with concrete ideas, not just theory.",
+  },
+  duration: { pl: "90 minut", en: "90 minutes" },
+  audience: { pl: "Rodzice dzieci w wieku 6–10 lat", en: "Parents of children aged 6–10" },
+  groupSize: { pl: "8–12 osób", en: "8–12 people" },
+  goal: {
+    pl: "Rozpoznanie własnych granic i reakcji emocjonalnych oraz wypróbowanie sposobów rozmowy z dzieckiem o trudnych sytuacjach.",
+    en: "Recognising your own boundaries and emotional reactions, and trying out ways to talk with a child about difficult situations.",
+  },
+  blocks: [
+    {
+      id: "open",
+      time: "0:00–0:10",
+      title: { pl: "Wejście bez pośpiechu", en: "A calm arrival" },
+      method: { pl: "Krótka runda: jedno słowo, które dziś przychodzi na myśl, gdy myślisz o granicach.", en: "A short round: one word that comes to mind today when you think about boundaries." },
+      purpose: { pl: "Stopniowe przejście z codzienności do tematu warsztatu.", en: "A gradual transition from everyday life into the workshop topic." },
+      materials: { pl: "Kartki i markery", en: "Paper cards and markers" },
+    },
+    {
+      id: "map",
+      time: "0:10–0:25",
+      title: { pl: "Mapa sytuacji", en: "Situation map" },
+      method: { pl: "Rodzice zapisują na karteczkach trzy sytuacje, w których trudno im ustalić granicę. Grupujemy je na wspólnej tablicy.", en: "Parents write three situations where it is hard to set a boundary. We group them on a shared board." },
+      purpose: { pl: "Wspólne zobaczenie, że trudności nie są odosobnione.", en: "Seeing together that the difficulties are not isolated." },
+      materials: { pl: "Karteczki samoprzylepne, duży arkusz", en: "Sticky notes, large sheet" },
+    },
+    {
+      id: "tool",
+      time: "0:25–0:45",
+      title: { pl: "Model: granica – potrzeba – reakcja", en: "Model: boundary – need – reaction" },
+      method: { pl: "Krótki mini-wykład z przykładami, potem ćwiczenie w parach: dopasowanie własnej sytuacji do modelu.", en: "A short mini-lecture with examples, then a pair exercise: matching your own situation to the model." },
+      purpose: { pl: "Nadanie rodzicom wspólnego języka do opisu trudnych momentów.", en: "Giving parents a shared language to describe difficult moments." },
+      materials: { pl: "Karty pracy z modelem", en: "Worksheets with the model" },
+    },
+    {
+      id: "practice",
+      time: "0:45–1:10",
+      title: { pl: "Próbne rozmowy", en: "Practice conversations" },
+      method: { pl: "Role-play w trójkach: rodzic, dziecko, obserwator. Po każdej rundzie krótka informacja zwrotna.", en: "Role-play in trios: parent, child, observer. After each round a short feedback round." },
+      purpose: { pl: "Bezpieczne wypróbowanie nowych sformułowań w realistycznej sytuacji.", en: "Safely trying out new phrasing in a realistic situation." },
+      materials: { pl: "Karty scenariuszowe", en: "Scenario cards" },
+    },
+    {
+      id: "close",
+      time: "1:10–1:30",
+      title: { pl: "Domknięcie i jedna rzecz do spróbowania", en: "Closing and one thing to try" },
+      method: { pl: "Każdy zapisuje jeden mały krok, który zrobi w domu. Wolontariusze dzielą się z grupą.", en: "Everyone writes one small step they will take at home. Volunteers share with the group." },
+      purpose: { pl: "Przeniesienie wniosku z sali do codziennego życia.", en: "Carrying the insight from the room into everyday life." },
+      materials: { pl: "Karteczki „Jedna rzecz"", en: "\"One thing\" cards" },
+    },
+  ],
+  embedUrl: "",
+  externalUrl: "",
+};
