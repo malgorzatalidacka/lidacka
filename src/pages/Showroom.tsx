@@ -129,6 +129,35 @@ const SessionLabBlockCard = ({
   );
 };
 
+const SessionLabBlocks = () => {
+  const [openId, setOpenId] = useState<string | null>(sessionLabScenario.blocks[0]?.id ?? null);
+  const { tl } = useLanguage();
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="heading-small">{pl ? "Przebieg warsztatu" : "Workshop flow"}</h3>
+        <span className="label-uppercase text-muted-foreground">
+          {sessionLabScenario.blocks.length} {pl ? "bloków" : "blocks"}
+        </span>
+      </div>
+      {sessionLabScenario.blocks.map((block, index) => (
+        <SessionLabBlockCard
+          key={block.id}
+          block={block}
+          index={index}
+          isOpen={openId === block.id}
+          onToggle={() => setOpenId(openId === block.id ? null : block.id)}
+        />
+      ))}
+      <p className="text-sm text-muted-foreground pt-2">
+        {pl
+          ? "Każdy blok ma swój czas, metodę i cel dydaktyczny. Tak wygląda pełny plan zajęć w SessionLab."
+          : "Each block has its own time, method and learning purpose. This is what a full SessionLab plan looks like."}
+      </p>
+    </div>
+  );
+};
+
 const Showroom = () => {
   const { tl, t, language } = useLanguage();
   const pl = language === "pl";
