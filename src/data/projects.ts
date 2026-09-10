@@ -15,6 +15,8 @@ import forma2 from '@/assets/projects/forma-2.jpg';
 import forma3 from '@/assets/projects/forma-3.jpg';
 import forma4 from '@/assets/projects/forma-4.jpg';
 import awansHero from '@/assets/projects/awans-hero.jpg';
+import parentClubsWorkshop from '@/assets/projects/parent-clubs-workshop.jpg';
+import ehfEuro2026 from '@/assets/projects/ehf-euro-2026.jpg';
 import type { Localized } from '@/i18n/translations';
 
 export interface Project {
