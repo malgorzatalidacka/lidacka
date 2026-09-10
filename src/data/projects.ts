@@ -204,6 +204,30 @@ export const projects: Project[] = [
     },
     image: forma1,
     images: [forma1, forma2, forma3, forma4]
+  },
+  {
+    id: "ehf-euro-2026",
+    title: "Women's EHF EURO 2026_",
+    client: "European Handball Federation",
+    category: {
+      pl: "Learning Design · Zarządzanie wydarzeniem · Współpraca międzynarodowa · VR",
+      en: "Learning Design · Event Management · International Cooperation · VR",
+    },
+    year: "2026",
+    description: {
+      pl: "Projekt prowadzenia Mistrzostw Europy w Piłce Ręcznej Kobiet 2026 — wydarzenia sportowego na najwyższym poziomie, które wymagało profesjonalizmu w każdym detalu, od przygotowania fizycznego i mentalnego, przez koordynację międzynarodowego zespołu, po wdrożenie nowoczesnych technologii VR.",
+      en: "Leading the Women's EHF EURO 2026 handball championship — a top-tier sports event that demanded professionalism in every detail, from physical and mental preparation, through coordinating an international team, to implementing modern VR technologies.",
+    },
+    challenge: {
+      pl: "Organizacja zawodów z udziałem ekip z całej Europy wymagała połączenia doskonałości sportowej, logistyki, komunikacji wielojęzycznej i gotowości psychicznej. Wyzwaniem było stworzenie środowiska, w którym ludzie z różnych kultur i specjalizacji współpracują płynnie pod ogromną presją wyniku.",
+      en: "Organising a tournament with teams from across Europe required combining sporting excellence, logistics, multilingual communication and mental readiness. The challenge was to create an environment where people from different cultures and specialisations work smoothly under intense performance pressure.",
+    },
+    solution: {
+      pl: "Zbudowałam spójny system przygotowań oparty na jasnych procedurach, regularnej komunikacji i narzędziach wspierających decyzje w czasie rzeczywistym. Wdrożenie elementów VR pozwoliło na immersyjne zapoznanie się z halą i procedurami jeszcze przed przyjazdem na miejsce, co usprawniło współpracę i zmniejszyło niepewność zespołu.",
+      en: "I built a coherent preparation system based on clear procedures, regular communication and real-time decision-support tools. Introducing VR elements allowed the team to immerse themselves in the arena and procedures before arrival, smoothing collaboration and reducing uncertainty.",
+    },
+    image: ehfEuro2026,
+    images: [ehfEuro2026, awansHero, forma1]
   }
 ];
 
