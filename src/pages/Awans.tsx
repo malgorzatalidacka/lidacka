@@ -303,7 +303,7 @@ const Awans = () => {
           </p>
 
           <Link
-            to="/work"
+            to="/projects"
             className="inline-flex items-center gap-3 mt-10 border border-foreground px-6 py-4 label-uppercase hover:bg-foreground hover:text-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             {pl ? "Wróć do projektów" : "Back to projects"}
