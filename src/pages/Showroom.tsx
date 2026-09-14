@@ -131,7 +131,8 @@ const SessionLabBlockCard = ({
 
 const SessionLabBlocks = () => {
   const [openId, setOpenId] = useState<string | null>(sessionLabScenario.blocks[0]?.id ?? null);
-  const { tl } = useLanguage();
+  const { tl, language } = useLanguage();
+  const pl = language === "pl";
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">

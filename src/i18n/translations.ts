@@ -46,7 +46,7 @@ export const translations = {
     "home.selected": "Wybrane prace",
     "home.viewAll": "Zobacz wszystkie projekty",
 
-    "work.title": "Wybór projektów ze studia_",
+    "work.title": "Zrealizowane projekty_",
 
     "case.label": "Case study",
     "case.overview": "Przegląd",
@@ -134,7 +134,7 @@ export const translations = {
     "home.selected": "Selected work",
     "home.viewAll": "View all projects",
 
-    "work.title": "A selection of projects from the studio_",
+    "work.title": "Completed projects_",
 
     "case.label": "Case study",
     "case.overview": "Overview",
