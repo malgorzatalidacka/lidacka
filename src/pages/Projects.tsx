@@ -12,7 +12,7 @@ const Work = () => {
       {/* Hero */}
       <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-20">
         <ScrollRevealText key={language} className="heading-display">
-          {t("work.title")}
+          {t("projects.title")}
         </ScrollRevealText>
       </section>
 

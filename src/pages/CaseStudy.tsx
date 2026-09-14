@@ -11,7 +11,7 @@ const CaseStudy = () => {
   const { t, tl } = useLanguage();
 
   if (!project) {
-    return <Navigate to="/work" replace />;
+    return <Navigate to="/projects" replace />;
   }
 
   // Get 3 latest projects excluding current one

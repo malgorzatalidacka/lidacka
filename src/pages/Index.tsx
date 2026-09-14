@@ -54,7 +54,7 @@ const Index = () => {
 
         <div className="mt-12 md:mt-16 text-center">
           <Link
-            to="/work"
+            to="/projects"
             className="inline-flex items-center gap-2 label-uppercase link-underline hover:opacity-70 transition-opacity"
           >
             {t("home.viewAll")}
