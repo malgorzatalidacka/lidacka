@@ -12,7 +12,7 @@ export type Localized = Record<Language, string>;
 
 export const translations = {
   pl: {
-    "nav.work": "Projekty",
+    "nav.projects": "Projekty",
     "nav.showroom": "Jak pracuję",
 
     "nav.passion": "Inspiracje",
@@ -46,7 +46,7 @@ export const translations = {
     "home.selected": "Wybrane prace",
     "home.viewAll": "Zobacz wszystkie projekty",
 
-    "work.title": "Zrealizowane projekty_",
+    "projects.title": "Projekty, z których jestem dumna_",
 
     "case.label": "Case study",
     "case.overview": "Przegląd",
@@ -100,7 +100,7 @@ export const translations = {
     "notFound.home": "Wróć na stronę główną",
   },
   en: {
-    "nav.work": "Work",
+    "nav.projects": "Projects",
     "nav.showroom": "How I work",
 
     "nav.passion": "Passion & Play",
@@ -134,7 +134,7 @@ export const translations = {
     "home.selected": "Selected work",
     "home.viewAll": "View all projects",
 
-    "work.title": "Completed projects_",
+    "projects.title": "projects I'm truly proud of_",
 
     "case.label": "Case study",
     "case.overview": "Overview",

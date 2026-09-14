@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
     return (
       <Link
         ref={cardRef}
-        to={`/work/${project.id}`}
+        to={`/projects/${project.id}`}
         className="group block"
         style={{ animationDelay: `${index * 100}ms` }}
       >
@@ -64,7 +64,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
   return (
     <Link
       ref={cardRef}
-      to={`/work/${project.id}`}
+      to={`/projects/${project.id}`}
       className={`group block relative overflow-hidden ${heightClass || "aspect-[16/10]"}`}
       style={{ animationDelay: `${index * 100}ms` }}
     >

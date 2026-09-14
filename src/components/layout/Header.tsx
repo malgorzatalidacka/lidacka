@@ -11,7 +11,7 @@ const Header = () => {
   const { t } = useLanguage();
 
   const navItems = [
-    { key: "nav.work", path: "/work" },
+    { key: "nav.projects", path: "/projects" },
     { key: "nav.showroom", path: "/showroom" },
     { key: "nav.passion", path: "/passion-play" },
     { key: "nav.about", path: "/about" },
