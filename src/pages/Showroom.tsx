@@ -13,6 +13,7 @@ import {
   showroomHeroChips,
   showroomTiles,
   sessionLabScenario,
+  skillCategories,
   type SessionLabBlock,
 } from "@/data/showroom";
 import { useLanguage } from "@/i18n/LanguageContext";
