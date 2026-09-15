@@ -105,6 +105,17 @@ export const showroomHeroChips: { glyph: string; label: Localized }[] = [
 
 export const showroomTiles: ShowroomTile[] = [
   {
+    id: "skills",
+    kicker: "SKILLS",
+    glyph: "🧠",
+    title: { pl: "Moje kompetencje", en: "My skills" },
+    body: {
+      pl: "Metodyki, narzędzia i umiejętności, których używam w projektowaniu edukacji.",
+      en: "Methodologies, tools and abilities I use in learning design.",
+    },
+    target: "skills",
+  },
+  {
     id: "play",
     kicker: "PLAY",
     glyph: "🎮",
