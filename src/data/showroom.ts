@@ -85,6 +85,14 @@ export interface PlaygroundItem {
   body: Localized;
 }
 
+export interface SkillCategory {
+  id: string;
+  glyph: string;
+  title: Localized;
+  description: Localized;
+  skills: Localized[];
+}
+
 export const showroomHeroChips: { glyph: string; label: Localized }[] = [
   { glyph: "🎮", label: { pl: "Gry", en: "Games" } },
   { glyph: "🧩", label: { pl: "Aktywności", en: "Activities" } },
