@@ -244,6 +244,9 @@ const Showroom = () => {
         </ul>
       </section>
 
+      {/* SKILLS */}
+      <SkillsSection />
+
       {/* FOUR ENTRANCES */}
       <section className="container-editorial pb-24 md:pb-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
