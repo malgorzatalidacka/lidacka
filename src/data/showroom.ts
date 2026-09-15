@@ -85,6 +85,14 @@ export interface PlaygroundItem {
   body: Localized;
 }
 
+export interface SkillCategory {
+  id: string;
+  glyph: string;
+  title: Localized;
+  description: Localized;
+  skills: Localized[];
+}
+
 export const showroomHeroChips: { glyph: string; label: Localized }[] = [
   { glyph: "🎮", label: { pl: "Gry", en: "Games" } },
   { glyph: "🧩", label: { pl: "Aktywności", en: "Activities" } },
@@ -96,6 +104,17 @@ export const showroomHeroChips: { glyph: string; label: Localized }[] = [
 ];
 
 export const showroomTiles: ShowroomTile[] = [
+  {
+    id: "skills",
+    kicker: "SKILLS",
+    glyph: "🧠",
+    title: { pl: "Moje kompetencje", en: "My skills" },
+    body: {
+      pl: "Metodyki, narzędzia i umiejętności, których używam w projektowaniu edukacji.",
+      en: "Methodologies, tools and abilities I use in learning design.",
+    },
+    target: "skills",
+  },
   {
     id: "play",
     kicker: "PLAY",
@@ -150,6 +169,76 @@ export const showroomTiles: ShowroomTile[] = [
       en: "From a real problem to an experience, feedback and iteration.",
     },
     target: "seehow",
+  },
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "instructional-design",
+    glyph: "🎯",
+    title: { pl: "Metodyki i projektowanie dydaktyczne", en: "Instructional Design Core" },
+    description: {
+      pl: "Fundament mojej pracy — wiem, jak uczyć dorosłych, a nie tylko tworzyć ładne prezentacje.",
+      en: "The foundation of my work — I know how adults learn, not just how to make pretty slides.",
+    },
+    skills: [
+      { pl: "Model ADDIE", en: "ADDIE Model" },
+      { pl: "Metodyka SAM", en: "SAM Methodology" },
+      { pl: "Andragogika", en: "Andragogy" },
+      { pl: "Taksonomia Blooma", en: "Bloom's Taxonomy" },
+      { pl: "Storyboarding", en: "Storyboarding" },
+      { pl: "Badanie potrzeb szkoleniowych (TNA)", en: "Training Needs Analysis (TNA)" },
+      { pl: "Projektowanie scenariuszy", en: "Scenario-Based Learning" },
+      { pl: "Grywalizacja w edukacji", en: "Gamification in education" },
+    ],
+  },
+  {
+    id: "tech-tools",
+    glyph: "🛠️",
+    title: { pl: "Narzędzia autorskie i techniczne", en: "Authoring & Technical Tools" },
+    description: {
+      pl: "Oprogramowanie, które pozwala mi budować interaktywne kursy, animacje i materiały wizualne.",
+      en: "Software that lets me build interactive courses, animations and visual materials.",
+    },
+    skills: [
+      { pl: "Articulate 360 (Storyline, Rise)", en: "Articulate 360 (Storyline, Rise)" },
+      { pl: "Adobe Captivate / Vyond", en: "Adobe Captivate / Vyond" },
+      { pl: "Zarządzanie LMS (Moodle, Cornerstone, Docebo, Canvas)", en: "LMS Management (Moodle, Cornerstone, Docebo, Canvas)" },
+      { pl: "SCORM / xAPI / AICC", en: "SCORM / xAPI / AICC" },
+      { pl: "Canva / Adobe Photoshop", en: "Canva / Adobe Photoshop" },
+      { pl: "Camtasia / Premiere Pro", en: "Camtasia / Premiere Pro" },
+      { pl: "Prompt engineering dla AI", en: "AI Prompt Engineering" },
+    ],
+  },
+  {
+    id: "business",
+    glyph: "📊",
+    title: { pl: "Zarządzanie projektami i biznes", en: "Business & Project Management" },
+    description: {
+      pl: "Praca z klientem, ekspertami i zespołem — od pomysłu po mierzalny efekt szkolenia.",
+      en: "Working with clients, subject-matter experts and teams — from idea to measurable training impact.",
+    },
+    skills: [
+      { pl: "Współpraca z ekspertami (SME)", en: "SME Management" },
+      { pl: "Agile / Scrum w edukacji", en: "Agile / Scrum in education" },
+      { pl: "User-Centered Design / LXD", en: "User-Centered Design / LXD" },
+      { pl: "Model Kirkpatricka", en: "Kirkpatrick Model" },
+    ],
+  },
+  {
+    id: "soft-skills",
+    glyph: "🤝",
+    title: { pl: "Umiejętności miękkie i językowe", en: "Soft Skills & Languages" },
+    description: {
+      pl: "Kompetencje, które pozwalają mi prowadzić projekty międzynarodowe i budować relacje.",
+      en: "Competencies that let me run international projects and build relationships.",
+    },
+    skills: [
+      { pl: "Język angielski (B2/C1)", en: "English (B2/C1)" },
+      { pl: "Komunikacja interpersonalna i asertywność", en: "Interpersonal communication & assertiveness" },
+      { pl: "Myślenie analityczne", en: "Analytical thinking" },
+      { pl: "Kreatywność i storytelling", en: "Creativity & storytelling" },
+    ],
   },
 ];
 

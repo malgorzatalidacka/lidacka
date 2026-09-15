@@ -13,6 +13,7 @@ import {
   showroomHeroChips,
   showroomTiles,
   sessionLabScenario,
+  skillCategories,
   type SessionLabBlock,
 } from "@/data/showroom";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -159,6 +160,54 @@ const SessionLabBlocks = () => {
   );
 };
 
+const SkillsSection = () => {
+  const { tl, language } = useLanguage();
+  const pl = language === "pl";
+  return (
+    <section id="skills" className="container-editorial pb-24 md:pb-32">
+      <Reveal>
+        <SectionHead
+          kicker="SKILLS"
+          title={pl ? "Umiejętności" : "Skills"}
+          intro={
+            pl
+              ? "Metodyki, narzędzia i kompetencje, które wykorzystuję w projektowaniu doświadczeń edukacyjnych."
+              : "Methodologies, tools and competencies I use in designing learning experiences."
+          }
+        />
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((cat) => (
+            <div
+              key={cat.id}
+              className="rounded-2xl border border-border bg-card p-6 md:p-8 transition-all duration-300 hover:border-foreground/40 motion-safe:hover:-translate-y-1"
+            >
+              <div className="flex items-start gap-4">
+                <span className="text-3xl" aria-hidden>{cat.glyph}</span>
+                <div>
+                  <h3 className="heading-small">{tl(cat.title)}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {tl(cat.description)}
+                  </p>
+                </div>
+              </div>
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {cat.skills.map((skill, idx) => (
+                  <li
+                    key={`${cat.id}-${idx}`}
+                    className="rounded-full border border-border bg-secondary/60 px-3 py-1.5 text-xs text-foreground"
+                  >
+                    {tl(skill)}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Reveal>
+    </section>
+  );
+};
+
 const Showroom = () => {
   const { tl, t, language } = useLanguage();
   const pl = language === "pl";
@@ -194,6 +243,9 @@ const Showroom = () => {
           ))}
         </ul>
       </section>
+
+      {/* SKILLS */}
+      <SkillsSection />
 
       {/* FOUR ENTRANCES */}
       <section className="container-editorial pb-24 md:pb-32">
