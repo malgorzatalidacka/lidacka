@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { ArrowDown, Download, Quote } from "lucide-react";
 
 const About = () => {
   const { t, tl, language } = useLanguage();
@@ -25,6 +26,15 @@ const About = () => {
     { pl: "Druk i opakowania", en: "Print & Packaging" },
   ];
 
+  const testimonials = [
+    { quote: { pl: "Miejsce na opinię o współpracy, podejściu do projektu i rezultatach.", en: "A place for a testimonial about the collaboration, approach and results." }, author: { pl: "Imię i nazwisko · rola", en: "Name and surname · role" } },
+    { quote: { pl: "Miejsce na opinię o jakości doświadczenia edukacyjnego i pracy z uczestnikami.", en: "A place for a testimonial about the quality of the learning experience and participant work." }, author: { pl: "Imię i nazwisko · organizacja", en: "Name and surname · organisation" } },
+    { quote: { pl: "Miejsce na opinię o uważności, komunikacji i wspólnym projektowaniu rozwiązania.", en: "A place for a testimonial about care, communication and co-designing the solution." }, author: { pl: "Imię i nazwisko · rola", en: "Name and surname · role" } },
+    { quote: { pl: "Miejsce na opinię o prowadzeniu warsztatu i zaangażowaniu grupy.", en: "A place for a testimonial about workshop facilitation and group engagement." }, author: { pl: "Imię i nazwisko · organizacja", en: "Name and surname · organisation" } },
+    { quote: { pl: "Miejsce na opinię o wiedzy merytorycznej, kreatywności i dobrej współpracy.", en: "A place for a testimonial about expertise, creativity and a strong working relationship." }, author: { pl: "Imię i nazwisko · rola", en: "Name and surname · role" } },
+    { quote: { pl: "Miejsce na opinię o wpływie projektu edukacyjnego na ludzi i organizację.", en: "A place for a testimonial about the learning project's impact on people and the organisation." }, author: { pl: "Imię i nazwisko · organizacja", en: "Name and surname · organisation" } },
+  ];
+
   return (
     <Layout>
       {/* Hero */}
@@ -32,6 +42,29 @@ const About = () => {
         <ScrollRevealText key={language} className="heading-large">
           {t("about.title")}
         </ScrollRevealText>
+      </section>
+
+      {/* CV download */}
+      <section className="container-editorial pb-24 md:pb-32">
+        <a
+          href={language === "pl" ? "/cv-lidacka-pl.pdf" : "/cv-lidacka-en.pdf"}
+          download
+          className="group grid grid-cols-12 gap-6 border-y border-border py-8 md:py-12 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4"
+          aria-label={t("about.cvDownload")}
+        >
+          <div className="col-span-12 md:col-span-2">
+            <span className="label-uppercase text-muted-foreground">{t("about.cvLabel")}</span>
+          </div>
+          <div className="col-span-10 md:col-span-8">
+            <h2 className="heading-small mb-3">{t("about.cvTitle")}</h2>
+            <p className="text-sm md:text-base text-muted-foreground">{t("about.cvDescription")}</p>
+          </div>
+          <div className="col-span-2 flex items-center justify-end">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border transition-transform duration-300 group-hover:-translate-y-1" aria-hidden="true">
+              <Download className="h-5 w-5" />
+            </span>
+          </div>
+        </a>
       </section>
 
       {/* Studio Image */}
@@ -76,6 +109,33 @@ const About = () => {
                 <span className="text-sm text-muted-foreground">{item.period}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="container-editorial pb-24 md:pb-32">
+        <div className="grid grid-cols-12 gap-8">
+          <div className="col-span-12 md:col-span-2">
+            <span className="label-uppercase text-muted-foreground">{t("about.testimonials")}</span>
+          </div>
+          <div className="col-span-12 md:col-span-10">
+            <h2 className="heading-medium max-w-3xl mb-8">{t("about.testimonialsTitle")}</h2>
+            <div className="relative">
+              <div className="h-[26rem] overflow-y-auto overscroll-contain border-y border-border pr-3 md:pr-6" tabIndex={0} aria-label={t("about.testimonials")}>
+                {testimonials.map((testimonial, index) => (
+                  <figure key={index} className="min-h-[13rem] border-b border-border py-8 md:py-10 last:border-b-0">
+                    <Quote className="mb-5 h-5 w-5 text-muted-foreground" aria-hidden="true" />
+                    <blockquote className="max-w-3xl text-xl md:text-2xl leading-snug">“{tl(testimonial.quote)}”</blockquote>
+                    <figcaption className="mt-6 text-sm text-muted-foreground">{tl(testimonial.author)}</figcaption>
+                  </figure>
+                ))}
+              </div>
+              <div className="mt-4 flex items-center gap-2 text-xs uppercase text-muted-foreground">
+                <ArrowDown className="h-4 w-4" aria-hidden="true" />
+                <span>{t("about.testimonialsHint")}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
