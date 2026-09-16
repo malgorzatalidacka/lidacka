@@ -41,7 +41,7 @@ export const translations = {
 
 
     "home.intro":
-      "Pomagam zespołom budować mocne doświadczenia marki. Jestem Lidacka, niezależna artystka i projektantka z Nowego Jorku. Specjalizuję się w identyfikacji wizualnej i systemach wizualnych dla firm, które cenią przemyślany design i strategiczne myślenie.",
+      "Jestem specjalistką ds. uczenia się i Instructional Designerką. Tworzę doświadczenia edukacyjne, które prowadzą serce i zdrowy rozsądek — uważne na ludzi, oparte na wiedzy i zaprojektowane tak, by naprawdę coś zmieniały.",
     "home.featured": "Wyróżnione",
     "home.selected": "Wybrane prace",
     "home.viewAll": "Zobacz wszystkie projekty",
@@ -63,6 +63,13 @@ export const translations = {
       "Moje podejście łączy myślenie strategiczne z dbałością o rzemiosło — każda decyzja projektowa ma swój cel, przy zachowaniu najwyższych standardów wizualnych. Kiedy nie projektuję, przeglądam archiwa typograficzne, fotografuję miejskie krajobrazy albo mentoruję początkujących projektantów.",
     "about.experience": "Doświadczenie",
     "about.services": "Usługi",
+    "about.cvLabel": "Curriculum Vitae",
+    "about.cvTitle": "Poznaj moje doświadczenie",
+    "about.cvDescription": "Pobierz moje CV w języku polskim w formacie PDF.",
+    "about.cvDownload": "Pobierz CV — PDF",
+    "about.testimonials": "Opinie",
+    "about.testimonialsTitle": "Kilka słów od osób, z którymi pracowałam",
+    "about.testimonialsHint": "Przewiń, aby zobaczyć wszystkie opinie",
 
     "contact.title": "Stwórzmy razem coś wyjątkowego_",
     "contact.lead":
@@ -129,7 +136,7 @@ export const translations = {
 
 
     "home.intro":
-      "I help teams build strong brand experiences. I'm Lidacka, an independent artist and designer based in New York City. I specialize in brand identity and visual systems for companies that value thoughtful design and strategic thinking.",
+      "I'm a learning professional and instructional designer, creating educational experiences led by heart and common sense — grounded in evidence, attentive to people, and designed to make a real difference.",
     "home.featured": "Featured",
     "home.selected": "Selected work",
     "home.viewAll": "View all projects",
@@ -151,6 +158,13 @@ export const translations = {
       "My approach combines strategic thinking with meticulous craft—ensuring that every design decision serves a purpose while maintaining the highest standards of visual excellence. When I'm not designing, you'll find me exploring typography archives, photographing urban landscapes, or mentoring emerging designers.",
     "about.experience": "Experience",
     "about.services": "Services",
+    "about.cvLabel": "Curriculum Vitae",
+    "about.cvTitle": "Explore my experience",
+    "about.cvDescription": "Download my English CV as a PDF.",
+    "about.cvDownload": "Download CV — PDF",
+    "about.testimonials": "Testimonials",
+    "about.testimonialsTitle": "A few words from people I've worked with",
+    "about.testimonialsHint": "Scroll to read all testimonials",
 
     "contact.title": "Let's create something great together_",
     "contact.lead":
