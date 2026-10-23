@@ -1,247 +1,151 @@
-# Portfolio L1
+# Małgorzata Lidacka — Professional Portfolio
 
-Conteúdo:
-Jordan Studio 
-A mid-career visual designer with 8+ years of experience crafting meaningful brand experiences.
+## About
 
-I'm Jordan, an independent artist and designer based in New York City. I specialize in brand identity and visual systems for companies that value thoughtful design and strategic thinking.
+This portfolio presents the professional practice of Małgorzata Lidacka: a trainer, facilitator, educator and social and educational project manager with experience in designing and delivering learning experiences, who continues to develop her competencies in Learning Experience Design.
 
-With over 8 years of experience working with startups, agencies, and established brands, I've developed a deep understanding of what makes a brand resonate with its audience.
+It brings together selected projects, practical tools, professional experience and the values that inform her approach to learning and collaboration.
 
-My approach combines strategic thinking with meticulous craft—ensuring that every design decision serves a purpose while maintaining the highest standards of visual excellence.
+## Project overview
 
-When I'm not designing, you'll find me exploring typography archives, photographing urban landscapes, or mentoring emerging designers.
+The website is a bilingual professional portfolio available in Polish and English. It presents selected educational and social projects, practical skills and tools, professional experience and personal inspirations.
 
-Services
-Brand Strategy & Positioning
-Visual Identity Design
-Logo & Mark Development
-Typography Systems
-Color Palette Development
-Brand Guidelines
-Art Direction
-Digital Product Design
-Motion Design
-Print & Packaging
+Its main sections are **Projects**, **Skills**, **Inspirations**, **About** and **Contact**. The website is a client-side React application designed to support conversations about professional collaboration.
 
-📌 Criar Portfolio – Template 2 (Layout Daylight)
+## Tech stack
 
-Quero que você gere um site de portfolio seguindo fielmente as referências visuais enviadas (Daylight).
-Isso significa: copie o layout, a hierarquia, o ritmo de whitespace, a tipografia e o comportamento das seções.
+The repository uses:
 
-Nada deve ser centralizado se não estiver centralizado no Daylight. Nada deve ter margem gigante lateral.
-A estrutura deve ser limpa, direta e amplamente editorial.
+- **React 18 and TypeScript** for the application and components.
+- **Vite 5** for local development and production builds.
+- **React Router 6** for client-side routing.
+- **Tailwind CSS 3, PostCSS and Autoprefixer** for styling.
+- **shadcn/ui components and Radix UI primitives** for interface elements.
+- **Lucide React** for icons.
+- **Embla Carousel** for testimonials.
+- **React Context and localStorage** for language selection and accessibility preferences.
+- **Web Speech API** for optional read-aloud functionality.
+- **ESLint** for static code analysis.
 
-1) DIRETRIZES GERAIS OBRIGATÓRIAS (NÃO NEGOCIE)
+The default Vite configuration uses the React SWC plugin. An alternative configuration, `.preview.config.mjs`, uses Vite’s built-in JSX transformation without the SWC plugin.
 
-O layout deve seguir exatamente o estilo da Daylight:
+## Project structure
 
-Tipografia: Sans-serif geométrica, elegante, com forte peso visual. Use uma fonte semelhante à Whyte / Suisse / Inter Wide / Aeonik.
+```text
+public/                 Static files served without processing
+src/
+  assets/               Bundled images and cursor graphics
+  components/           Shared interface and feature components
+    layout/             Header, footer and page layout
+    inspirations/       Components used in the Inspirations section
+    ui/                 Reusable interface primitives
+  data/                 Portfolio content and work-sample configuration
+  hooks/                Shared React hooks, including reduced-motion support
+  i18n/                 Polish and English translations and language context
+  lib/                  Shared utilities
+  pages/                Route-level page components
+  App.tsx               Application providers and routes
+  index.css             Global typography, colours and accessibility styles
 
-Grid: full-width real, ocupando quase toda a tela, com margem lateral entre 48–64px no desktop.
+ACCESSIBILITY.md        Accessibility implementation notes and outstanding checks
+AGENTS.md               Repository guidance for coding assistants
+vite.config.ts          Default Vite configuration
+.preview.config.mjs     Alternative local development and build configuration
+```
 
-Nada de centralização. Nada de containers estreitos.
+## Getting started
 
-Muito whitespace vertical; pouco whitespace horizontal.
+### Prerequisites
 
-Fotos e mockups extremamente grandes, que dominam a tela.
+Install Git and a maintained Node.js LTS release with npm.
 
-Títulos grandes em linhas quebradas, estilo editorial.
+### Install dependencies
 
-O underline em títulos (“_”) deve ser preservado quando usado.
+```bash
+git clone https://github.com/malgorzatalidacka/lidacka.git
+cd lidacka
+npm ci
+```
 
-Tema ultra minimalista e sofisticado, com foco em clareza, força visual e grandes blocos de imagem.
+Use `package-lock.json` as the dependency reference when working with npm.
 
-Use o meu conteúdo (Nome, Bio, Projetos etc.) — mas sempre dentro do framework visual do Daylight.
+### Start the development server
 
-2) ESTRUTURA DAS PÁGINAS
-Página 01 — Home
-
-Objetivo: replicar a estrutura da homepage do Daylight.
-
-Hero
-
-Criar hero com vídeo ou imagem full-width no topo, semelhante ao case Tohora.
-
-O header deve ser leve, alinhado ao topo, 48–64px de margin lateral.
-
-Menu minimalista, uppercase opcional, tracking sutil.
-
-Logo texto simples, igual ao Daylight: tipografia bold e ponto no final.
-
-Texto de apresentação (logo abaixo do hero)
-
-Título grande e editorial, quebrado em múltiplas linhas:
-*"I help teams build high-impact digital products."_
-
-Subtexto leve, com 1–2 parágrafos, inspirado no texto Daylight.
-
-O bloco deve ocupar apenas metade da largura, alinhado à esquerda, com muito whitespace.
-
-Featured Projects Section
-
-Criar seção “FEATURED” exatamente como no Daylight:
-
-Label com ● e FEATURED em uppercase.
-
-Um grande card principal ocupando quase 100% da largura.
-
-Título grande sobre a imagem, alinhado à esquerda, com underline “_”.
-
-Subtítulo com cliente + categoria.
-
-Grid de projetos
-
-Usar cards gigantes, horizontais ou verticais, como no Daylight.
-
-Nada de bordas arredondadas.
-
-Espaçamento amplo entre cards.
-
-2 colunas no desktop.
-
-Página 02 — Work (lista in-page ou página dedicada, escolha a melhor decisão)
-
-Deve funcionar como a página de "cases" da Daylight.
-
-Títulos grandes, alinhados à esquerda, sem centralização.
-
-Cards enormes com imagens edge-to-edge.
-
-Labels em uppercase (ex.: CASE STUDY, FEATURED, etc.).
-
-Espaço generoso entre seções.
-
-Página 03 — Case Study Template (Página do Projeto)
-
-Replicar a estrutura mostrada no case Safeswim:
-
-Hero do Projeto
-
-Header simples.
-
-Label: ● CASE STUDY
-
-Título gigante quebrado em múltiplas linhas.
-
-Subtítulo com cliente.
-
-Imagem hero gigantesca, full-width real (com margens laterais de ~48–64px).
-
-Overview Section
-
-Seguir a estrutura Overview → Challenge → Solution.
-
-Dois blocos lado a lado — texto à esquerda e texto à direita.
-
-Títulos das seções em uppercase com espaçamento pequeno entre letras.
-
-Parágrafos curtos, editorializados.
-
-Galeria / Imagens
-
-Imagens grandes, sempre ocupando boa parte da largura.
-
-Layout irregular: algumas imagens lado a lado, outras full-width.
-
-Página 04 — About
-
-Inspirada na página About do Daylight:
-
-Título editorial enorme quebrado em linhas:
-*"Designer focused on meaningful digital experiences."_
-
-Subtítulo com 1–2 parágrafos.
-
-Uma seção “Experience” seguindo a grid da Daylight.
-
-Espaçamento massivo, sem centralização.
-
-Nada de cartões; tudo texto puro, limpo e elegante.
-
-Página 05 — Styleguide
-
-Criar um styleguide seguindo a estética Daylight:
-
-Tipografia
-
-Heading 1
-
-Heading 2
-
-Heading 3
-
-Paragraph
-
-Caption / Meta text
-
-Itálico editorial
-
-Regras claras sobre spacing e line-height.
-
-Cores
-
-Paleta minimalista monocromática: Preto, branco, cinza.
-
-Adição de 1 highlight color (igual ao verde do Daylight ou laranja suave).
-
-Botões
-
-Botões retangulares simples, bordas 4px ou zero, sem sombras.
-
-Grid / Spacing
-
-Margens laterais: 48–64px.
-
-Gutters amplos.
-
-Imagens sempre dominantes.
-
-3) COMPORTAMENTOS OBRIGATÓRIOS
-
-Nunca centralizar nada que não esteja centralizado no Daylight.
-
-Evitar margens horizontais grandes.
-
-Usar grid respirado e editorial.
-
-Usar headings enormes, como os exemplos enviados.
-
-Manter a brutalidade e força visual das seções de imagem.
-
-4) CONTEÚDO QUE DEVE SER INSERIDO
-
-Use o conteúdo-base que eu já enviei anteriormente (nome, bio, projetos, anos, cargos etc.), aplicando tudo dentro da estética Daylight.
-
-5) TOLERÂNCIA ZERO
-
-Se a IA:
-
-❌ centralizar conteúdo
-❌ criar margens gigantes
-❌ usar grid estreito
-❌ diminuir a força visual das imagens
-❌ arredondar tudo desnecessariamente
-
-Refaça automaticamente e mantenha o estilo Daylight.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/60788911-9e26-49bb-ae09-da45b1b0a748).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
 npm run dev
 ```
+
+The configured port is `8080`. Use the actual URL printed in the terminal; Vite may choose another port if it is occupied.
+
+### Alternative configuration
+
+If the default configuration fails with a native SWC binding error, use:
+
+```bash
+npm run dev -- --config .preview.config.mjs --host 127.0.0.1 --port 8082
+```
+
+This configuration has been used successfully for local portfolio previews.
+
+### Build and check
+
+```bash
+npx tsc --noEmit -p tsconfig.app.json
+npm run lint
+npm run build
+```
+
+The TypeScript check and production build with the alternative configuration have passed in the development environment:
+
+```bash
+npm run build -- --config .preview.config.mjs
+```
+
+Build output is written to `dist/`. To preview an existing build:
+
+```bash
+npm run preview
+```
+
+For production hosting, configure a fallback to `index.html` so that direct visits to nested routes work correctly.
+
+## Collaboration
+
+**All development takes place on separate branches. Changes enter `main` through Pull Requests after review.**
+
+1. Create a separate branch from an up-to-date `main`.
+2. Implement and check the change locally.
+3. Open a Pull Request describing the change and relevant validation.
+4. Review the code, content, responsive layout and accessibility before merging into `main`.
+
+Preserve both language versions when updating content. Follow the accessibility guidance in `AGENTS.md` and record relevant findings in `ACCESSIBILITY.md`.
+
+Do not commit secrets, private source documents or local build output. Environment files and common local artefacts are excluded through `.gitignore`. Files in `public/` and imported application assets should be treated as publishable content.
+
+## Accessibility
+
+The website includes:
+
+- A skip link and a main content landmark.
+- Semantic headings, labelled controls and visible keyboard focus styles.
+- Polish and English document-language updates.
+- Text-size controls from 100% to 200%.
+- A higher-contrast preference that removes shared decorative gradients.
+- Support for the operating system’s reduced-motion preference and an additional motion setting.
+- A pause/resume control for the homepage slideshow.
+- Manually controlled testimonials.
+- Alternative text for informative images and empty alternative text for decorative slideshow images.
+- Optional read-aloud functionality with Polish and English language selection and a stop control.
+- Persistent language and accessibility preferences stored locally in the browser.
+
+The target is **WCAG 2.2 AA**. These features and the checks performed so far do not establish full conformance.
+
+Outstanding work includes a comprehensive automated audit, screen-reader testing, narrow-screen and zoom checks, review of image overlays and final image descriptions, and replacement of placeholder CV files with accessible, tagged documents. Current status is documented in `ACCESSIBILITY.md`.
+
+## Credits and licensing
+
+This portfolio presents the professional work of **Małgorzata Lidacka**. Original text, photographs, testimonials and project materials remain the property of their respective authors and rights holders.
+
+Some images are temporary or third-party assets. Confirm their authorship, permissions and required attribution before final publication or reuse. Third-party software and fonts remain subject to their own licences.
+
+**No project-level licence grants general permission to reuse this project.** Public availability on GitHub does not grant permission to reuse its code, photographs or other materials.
