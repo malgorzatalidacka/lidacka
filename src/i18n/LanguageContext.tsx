@@ -1,3 +1,4 @@
+import { updateMetadata } from "@/lib/metadata";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, ReactNode } from "react";
 import {
   DEFAULT_LANGUAGE,
@@ -32,6 +33,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     document.documentElement.lang = language;
+    updateMetadata(language);
     window.localStorage.setItem(STORAGE_KEY, language);
   }, [language]);
 
