@@ -1,3 +1,4 @@
+import { imageDescription } from "@/data/imageDescriptions";
 import { Link } from "react-router-dom";
 import { Project } from "@/data/projects";
 import { useEffect, useRef, useState } from "react";
@@ -13,7 +14,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: ProjectCardProps) => {
   const cardRef = useRef<HTMLAnchorElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const { tl } = useLanguage();
+  const { tl, language } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -44,7 +45,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
         <div className="relative overflow-hidden aspect-[4/3] mb-4">
           <img
             src={project.image}
-            alt={project.title}
+            alt={imageDescription(project.image, language, project.title)}
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </div>
@@ -53,7 +54,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}>
           <span className="text-sm text-muted-foreground block mb-1">{project.client}</span>
-          <h3 className="text-lg md:text-xl font-medium group-hover:opacity-70 transition-opacity">
+          <h3 className="heading-small group-hover:opacity-70 transition-opacity">
             {project.title}
           </h3>
         </div>
@@ -72,7 +73,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
       
       <img
         src={project.image}
-        alt={project.title}
+        alt={imageDescription(project.image, language, project.title)}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
       
@@ -88,7 +89,7 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
           <span className="label-uppercase text-white/70">{project.year}</span>
         </div>
         <h3 
-          className={`text-2xl md:text-4xl lg:text-5xl font-normal leading-[1] tracking-tight text-white transition-all duration-700 ${
+          className={`heading-medium text-white transition-all duration-700 ${
             isVisible 
               ? "opacity-100 translate-y-0" 
               : "opacity-0 translate-y-10"
@@ -113,3 +114,4 @@ const ProjectCard = ({ project, index = 0, variant = "overlay", heightClass }: P
 };
 
 export default ProjectCard;
+

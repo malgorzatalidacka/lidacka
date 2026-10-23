@@ -19,15 +19,15 @@ const Index = () => {
       </section>
 
       {/* Introduction with Scroll Reveal */}
-      <section className="container-editorial py-24 md:py-32">
-        <ScrollRevealText key={language} className="text-xl md:text-2xl lg:text-[42px] font-normal leading-tight lg:leading-[1.2] max-w-5xl">
+      <section className="container-editorial py-12 md:py-16">
+        <ScrollRevealText key={language} className="heading-medium max-w-5xl">
           {t("home.intro")}
         </ScrollRevealText>
       </section>
 
       {/* Featured Projects - Single Column */}
-      <section className="container-editorial pb-16 md:pb-24">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-10 md:pb-12">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-accent" />
           <span className="label-uppercase">{t("home.featured")}</span>
         </div>
@@ -40,8 +40,8 @@ const Index = () => {
       </section>
 
       {/* Grid Projects */}
-      <section className="container-editorial pb-24 md:pb-32">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-12 md:pb-16">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-foreground" />
           <span className="label-uppercase">{t("home.selected")}</span>
         </div>
@@ -52,7 +52,7 @@ const Index = () => {
           ))}
         </div>
 
-        <div className="mt-12 md:mt-16 text-center">
+        <div className="mt-8 md:mt-10 text-center">
           <Link
             to="/projects"
             className="inline-flex items-center gap-2 label-uppercase link-underline hover:opacity-70 transition-opacity"

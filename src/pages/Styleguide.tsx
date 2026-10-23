@@ -4,8 +4,8 @@ const Styleguide = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="container-editorial pt-16 md:pt-24 pb-16 md:pb-24">
-        <div className="flex items-center gap-3 mb-6">
+      <section className="container-editorial pt-10 md:pt-12 pb-10 md:pb-12">
+        <div className="flex items-center gap-3 mb-4">
           <span className="w-2 h-2 rounded-full bg-accent" />
           <span className="label-uppercase">Styleguide</span>
         </div>
@@ -18,44 +18,44 @@ const Styleguide = () => {
       </section>
 
       {/* Typography */}
-      <section className="container-editorial pb-16 md:pb-24">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-10 md:pb-12">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-foreground" />
           <span className="label-uppercase">Typography</span>
         </div>
         
-        <div className="space-y-12">
-          <div className="pb-8 border-b border-border">
+        <div className="space-y-8">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Heading Display</span>
             <p className="heading-display">The quick brown fox jumps over</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Heading Large</span>
             <p className="heading-large">The quick brown fox jumps over the lazy dog</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Heading Medium</span>
             <p className="heading-medium">The quick brown fox jumps over the lazy dog</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Heading Small</span>
             <p className="heading-small">The quick brown fox jumps over the lazy dog</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Text Editorial</span>
             <p className="text-editorial max-w-3xl">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump!</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Text Body</span>
             <p className="text-body max-w-3xl">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump! The five boxing wizards jump quickly.</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Label Uppercase</span>
             <p className="label-uppercase">The quick brown fox jumps over the lazy dog</p>
           </div>
@@ -63,8 +63,8 @@ const Styleguide = () => {
       </section>
 
       {/* Colors */}
-      <section className="container-editorial pb-16 md:pb-24">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-10 md:pb-12">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-foreground" />
           <span className="label-uppercase">Colors</span>
         </div>
@@ -97,24 +97,24 @@ const Styleguide = () => {
       </section>
 
       {/* Spacing */}
-      <section className="container-editorial pb-16 md:pb-24">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-10 md:pb-12">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-foreground" />
           <span className="label-uppercase">Spacing & Grid</span>
         </div>
         
-        <div className="space-y-8">
-          <div className="pb-8 border-b border-border">
+        <div className="space-y-6">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Container Margins</span>
             <p className="text-body">48px (mobile) — 64px (desktop)</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Grid Gap</span>
             <p className="text-body">24px (mobile) — 32px (desktop)</p>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Section Spacing</span>
             <p className="text-body">96px (mobile) — 128px (desktop)</p>
           </div>
@@ -122,28 +122,28 @@ const Styleguide = () => {
       </section>
 
       {/* Buttons */}
-      <section className="container-editorial pb-24 md:pb-32">
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+      <section className="container-editorial pb-12 md:pb-16">
+        <div className="flex items-center gap-3 mb-6 md:mb-8">
           <span className="w-2 h-2 rounded-full bg-foreground" />
           <span className="label-uppercase">Buttons & Links</span>
         </div>
         
-        <div className="space-y-8">
-          <div className="pb-8 border-b border-border">
+        <div className="space-y-6">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Primary Button</span>
             <button className="bg-foreground text-background px-8 py-4 label-uppercase hover:opacity-80 transition-opacity">
               View Project
             </button>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Secondary Button</span>
             <button className="border border-foreground text-foreground px-8 py-4 label-uppercase hover:bg-foreground hover:text-background transition-colors">
               Contact
             </button>
           </div>
           
-          <div className="pb-8 border-b border-border">
+          <div className="pb-6 border-b border-border">
             <span className="label-uppercase text-muted-foreground mb-4 block">Link with Underline</span>
             <a href="#" className="label-uppercase link-underline">
               View All Projects →

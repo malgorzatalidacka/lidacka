@@ -1,7 +1,7 @@
 import type { Localized } from "@/i18n/translations";
 
 export const awansMeta = {
-  title: "AWANS",
+  title: "Awans 2026",
   subtitle: {
     pl: "Program rozwoju młodych sędziów piłki ręcznej",
     en: "Young Handball Referees Development Programme",
@@ -342,3 +342,4 @@ export const awansRoad: Localized[] = [
   { pl: "EGZAMIN KOŃCOWY", en: "FINAL EXAM" },
   { pl: "AWANS", en: "ADVANCE" },
 ];
+

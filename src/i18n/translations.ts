@@ -43,19 +43,19 @@ export const translations = {
     "home.intro":
       "Jestem specjalistką ds. uczenia się i Instructional Designerką. Tworzę doświadczenia edukacyjne, które prowadzą serce i zdrowy rozsądek — uważne na ludzi, oparte na wiedzy i zaprojektowane tak, by naprawdę coś zmieniały.",
     "home.featured": "Wyróżnione",
-    "home.selected": "Wybrane prace",
+    "home.selected": "Inne realizacje",
     "home.viewAll": "Zobacz wszystkie projekty",
 
     "projects.title": "Projekty, z których jestem dumna_",
 
     "case.label": "Case study",
-    "case.overview": "Przegląd",
+    "case.overview": "Wymagania",
     "case.challenge": "Wyzwanie",
     "case.solution": "Rozwiązanie",
-    "case.latest": "Najnowsze prace",
+    "case.latest": "Inne realizacje",
     "case.image": "Zdjęcie",
 
-    "about.title": "Projektantka tworząca znaczące doświadczenia cyfrowe_",
+    "about.title": "Projektuję doświadczenia edukacyjne",
     "about.imageAlt": "Przestrzeń pracy Lidacka Studio",
     "about.bio1":
       "Jestem Lidacka, niezależna artystka i projektantka z Nowego Jorku. Mam ponad 8 lat doświadczenia we współpracy ze startupami, agencjami i uznanymi markami, dzięki czemu dobrze rozumiem, co sprawia, że marka trafia do swoich odbiorców.",
@@ -76,8 +76,8 @@ export const translations = {
       "Zawsze chętnie słucham o nowych projektach, kreatywnych pomysłach i możliwościach współpracy przy Twoich wizjach.",
     "contact.emailLabel": "E-mail",
     "contact.locationLabel": "Lokalizacja",
-    "contact.location": "Nowy Jork",
-    "contact.locationSub": "Współpracuję na całym świecie",
+    "contact.location": "Kraków",
+    "contact.locationSub": "Lubię chodzić do biura, współpracuję również zdalnie.",
     "contact.formTitle": "Napisz wiadomość",
     "contact.form.name": "Imię i nazwisko",
     "contact.form.namePlaceholder": "Twoje imię",
@@ -90,8 +90,8 @@ export const translations = {
 
     "footer.stayInTouch": "Bądźmy w kontakcie",
     "footer.location": "Lokalizacja",
-    "footer.locationValue": "Nowy Jork",
-    "footer.locationSub": "Współpracuję na całym świecie",
+    "footer.locationValue": "Kraków, Polska",
+    "footer.locationSub": "Pracuję na miejscu i zdalnie",
     "footer.partner": "Współpraca",
     "footer.cta": "Porozmawiajmy",
     "footer.newsletter": "Newsletter",
@@ -144,7 +144,7 @@ export const translations = {
     "projects.title": "projects I'm truly proud of_",
 
     "case.label": "Case study",
-    "case.overview": "Overview",
+    "case.overview": "Requirements",
     "case.challenge": "Challenge",
     "case.solution": "Solution",
     "case.latest": "Latest work",
@@ -171,8 +171,8 @@ export const translations = {
       "I'm always interested in hearing about new projects, creative ideas, or opportunities to be part of your visions.",
     "contact.emailLabel": "Email",
     "contact.locationLabel": "Location",
-    "contact.location": "Based in New York City",
-    "contact.locationSub": "Available worldwide",
+    "contact.location": "Kraków",
+    "contact.locationSub": "I enjoy working in the office, and I also collaborate remotely.",
     "contact.formTitle": "Send a message",
     "contact.form.name": "Name",
     "contact.form.namePlaceholder": "Your name",
@@ -185,8 +185,8 @@ export const translations = {
 
     "footer.stayInTouch": "Stay in Touch",
     "footer.location": "Location",
-    "footer.locationValue": "New York City",
-    "footer.locationSub": "Available worldwide",
+    "footer.locationValue": "Kraków, Poland",
+    "footer.locationSub": "I work on-site and remotely",
     "footer.partner": "Partner with Us",
     "footer.cta": "Let's Chat",
     "footer.newsletter": "Newsletters",
@@ -204,3 +204,4 @@ export const translations = {
 } as const;
 
 export type TranslationKey = keyof (typeof translations)["pl"];
+

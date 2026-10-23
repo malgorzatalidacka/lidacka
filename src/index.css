@@ -6,44 +6,49 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 4%;
+    --background: 43 60% 97%;
+    --foreground: 25 24% 14%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 4%;
+    --card: 45 65% 98%;
+    --card-foreground: 25 24% 14%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 4%;
+    --popover: 45 65% 98%;
+    --popover-foreground: 25 24% 14%;
     
-    --primary: 0 0% 4%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 25 24% 14%;
+    --primary-foreground: 35 33% 96%;
     
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 4%;
+    --secondary: 44 60% 91%;
+    --secondary-foreground: 25 24% 14%;
     
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 42 38% 93%;
+    --muted-foreground: 25 15% 30%;
     
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 27 24% 32%;
+    --accent-foreground: 36 38% 98%;
+    --happy-accent: 27 28% 29%;
+    --happy-sun: 46 85% 82%;
+    --happy-bloom: 39 55% 87%;
+    --happy-surface: 45 65% 94%;
+    --portfolio-peach: 43 65% 90%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 142 71% 45%;
+    --border: 27 14% 48%;
+    --input: 27 14% 42%;
+    --ring: 27 28% 29%;
     
     --radius: 0px;
     
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-background: 43 60% 97%;
+    --sidebar-foreground: 25 24% 14%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 27 24% 32%;
+    --sidebar-accent-foreground: 36 38% 98%;
+    --sidebar-border: 27 14% 48%;
+    --sidebar-ring: 27 28% 29%;
   }
 
   .dark {
@@ -63,17 +68,22 @@
     --secondary-foreground: 0 0% 98%;
     
     --muted: 0 0% 14%;
-    --muted-foreground: 0 0% 55%;
+    --muted-foreground: 32 14% 73%;
     
-    --accent: 142 71% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 32 28% 78%;
+    --accent-foreground: 25 24% 14%;
+    --happy-accent: 32 28% 78%;
+    --happy-sun: 28 16% 19%;
+    --happy-bloom: 24 12% 23%;
+    --happy-surface: 25 15% 12%;
+    --portfolio-peach: 27 16% 16%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 142 71% 45%;
+    --ring: 32 28% 78%;
   }
 }
 
@@ -84,6 +94,7 @@
   
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.45;
   }
   
   html {
@@ -96,20 +107,17 @@
     @apply w-full px-4 md:px-8;
   }
   
-  .heading-display {
-    @apply text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-normal leading-[0.95] tracking-tight;
-  }
-  
+  .heading-display,
   .heading-large {
-    @apply text-3xl md:text-5xl lg:text-6xl font-normal leading-[1] tracking-tight;
+    @apply text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] font-medium leading-[1.15] tracking-tight text-balance;
   }
   
   .heading-medium {
-    @apply text-2xl md:text-3xl lg:text-4xl font-medium leading-[1.1] tracking-tight;
+    @apply text-[1.5rem] md:text-[2rem] font-medium leading-[1.2] tracking-tight text-balance;
   }
   
   .heading-small {
-    @apply text-xl md:text-2xl font-medium leading-[1.2];
+    @apply text-xl md:text-[1.5rem] font-medium leading-[1.25] tracking-tight;
   }
   
   .label-uppercase {
@@ -117,11 +125,13 @@
   }
   
   .text-editorial {
-    @apply text-lg md:text-xl lg:text-2xl leading-relaxed;
+    @apply text-lg md:text-xl;
+    line-height: 1.45;
   }
   
   .text-body {
-    @apply text-base md:text-lg leading-relaxed;
+    @apply text-base md:text-lg;
+    line-height: 1.45;
   }
   
   .link-underline {
@@ -140,20 +150,117 @@
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
-/* Warm, optimistic scoped theme for the Action for Happiness essay */
+/* Shared pale sunshine, peach and rose palette from Action for Happiness.
+   Gradients tint existing surfaces without changing layout or typography. */
+#main-content,
 .theme-happiness {
-  --background: 40 46% 97%;
-  --foreground: 26 22% 13%;
-  --card: 0 0% 100%;
-  --card-foreground: 26 22% 13%;
-  --muted: 38 34% 94%;
-  --muted-foreground: 28 12% 40%;
-  --border: 36 28% 88%;
-  --accent: 22 88% 60%;
-  --accent-foreground: 0 0% 100%;
-  --happy-accent: 22 88% 60%;
-  --happy-sun: 44 96% 66%;
-  --happy-bloom: 340 72% 78%;
-  --happy-surface: 38 44% 95%;
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(ellipse 85% 580px at 0% 0%, hsl(var(--happy-sun) / .65), transparent 75%),
+    radial-gradient(ellipse 75% 680px at 100% 420px, hsl(var(--happy-bloom) / .65), transparent 75%),
+    linear-gradient(145deg, hsl(var(--background)), hsl(var(--portfolio-peach) / .45) 55%, hsl(var(--background)));
 }
 
+header.bg-background {
+  background-image: linear-gradient(100deg, hsl(var(--happy-sun) / .35), hsl(var(--background)) 55%, hsl(var(--happy-bloom) / .35));
+}
+
+main .bg-card {
+  background-image: linear-gradient(145deg, hsl(var(--card)), hsl(var(--portfolio-peach) / .35));
+  box-shadow: 0 10px 30px -20px hsl(var(--happy-accent) / .2);
+}
+
+main .bg-secondary,
+main .bg-muted {
+  background-image: linear-gradient(120deg, hsl(var(--happy-sun) / .25), hsl(var(--happy-bloom) / .25));
+}
+
+footer.bg-foreground {
+  background-image: linear-gradient(125deg, hsl(var(--foreground)), #38251f);
+}
+.dark footer.bg-foreground { background-image: none; }
+
+
+/* Accessible defaults and user preferences. */
+:focus-visible { outline: 3px solid hsl(var(--ring)); outline-offset: 4px; }
+footer :focus-visible { outline-color: hsl(var(--background)); }
+.skip-link { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: 1rem; background: white; color: black; transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.accessibility-tools { position: fixed; right: 1rem; bottom: 1rem; z-index: 60; font-size: 1rem; }
+.accessibility-tools summary { cursor: pointer; padding: .75rem 1rem; border: 1px solid currentColor; background: hsl(var(--background)); color: hsl(var(--foreground)); border-radius: .25rem; }
+.accessibility-panel { position: absolute; right: 0; bottom: calc(100% + .5rem); width: min(22rem, calc(100vw - 2rem)); max-height: 65dvh; overflow-y: auto; padding: 1.25rem; border: 1px solid hsl(var(--border)); background: hsl(var(--background)); color: hsl(var(--foreground)); box-shadow: 0 4px 24px #0002; }
+.accessibility-panel input { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+html[data-high-contrast="true"] { --muted-foreground: 0 0% 20%; --border: 0 0% 35%; }
+html[data-high-contrast="true"] #main-content,
+html[data-high-contrast="true"] .theme-happiness,
+html[data-high-contrast="true"] header,
+html[data-high-contrast="true"] main .bg-card,
+html[data-high-contrast="true"] main .bg-secondary,
+html[data-high-contrast="true"] main .bg-muted,
+html[data-high-contrast="true"] footer { background-image: none; box-shadow: none; }
+html[data-high-contrast="true"] .text-background\/60, html[data-high-contrast="true"] .text-background\/80 { color: hsl(var(--background)); }
+html[data-reduce-motion="true"] { scroll-behavior: auto; }
+html[data-reduce-motion="true"] *, html[data-reduce-motion="true"] *::before, html[data-reduce-motion="true"] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+main, footer { overflow-wrap: anywhere; }
+footer { padding-bottom: 7rem !important; }
+@media (max-width: 767px) {
+  .grid-cols-12 { column-gap: 4px !important; }
+}
+.grid > * { min-width: 0; }
+#opinie [aria-label="Wybierz opinię"] button, #opinie [aria-label="Choose a testimonial"] button { width: 44px; flex-shrink: 0; }
+
+/* A local geometric arrow replaces the hand cursor on interactive controls. */
+a[href],
+button:not(:disabled),
+summary,
+[role="button"]:not([aria-disabled="true"]),
+input[type="checkbox"]:not(:disabled),
+input[type="radio"]:not(:disabled),
+.cursor-pointer,
+.accessibility-tools summary {
+  cursor: url("./assets/cursor-arrow.svg") 1 1, default;
+}
+
+footer,
+footer *,
+footer a[href],
+footer button:not(:disabled),
+footer [role="button"]:not([aria-disabled="true"]),
+footer input[type="checkbox"]:not(:disabled),
+footer input[type="radio"]:not(:disabled),
+footer .cursor-pointer {
+  cursor: url("./assets/cursor-arrow-white.svg") 1 1, default;
+}
+
+
+/* Caffe latte surfaces: text and controls retain the shared contrast tokens. */
+:root {
+  --latte-cream: 47 78% 87%;
+  --latte-oat: 43 60% 89%;
+  --latte-mocha: 36 42% 88%;
+}
+.dark {
+  --latte-cream: 30 16% 17%;
+  --latte-oat: 28 14% 20%;
+  --latte-mocha: 25 13% 23%;
+}
+
+
+
+/* Keep headings readable when text is enlarged; never split individual words. */
+h1, h2, h3, h4, h5, h6 { overflow-wrap: normal; word-break: normal; hyphens: none; }
+html[data-high-contrast="true"] main [class*="bg-gradient"] { background-image: none; }
+html.dark[data-high-contrast="true"] { --muted-foreground: 0 0% 90%; --border: 0 0% 65%; }
+main h2.label-uppercase { font-size: 1rem; line-height: 1.3; letter-spacing: .08em; }
+@media (min-width: 768px) {
+  .text-body, .text-editorial { line-height: 1.45; }
+}
+/* Twelve-column layouts must leave room for content at enlarged root text sizes. */
+.grid.grid-cols-12 { column-gap: min(2rem, 2vw); }
+@media (min-width: 768px) {
+  .grid[class~="md:grid-cols-12"] { column-gap: min(2rem, 2vw); }
+}

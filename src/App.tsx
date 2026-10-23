@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import PassionPlay from "./pages/PassionPlay";
 import ActionForHappiness from "./pages/ActionForHappiness";
+import JoyCuriosity from "./pages/JoyCuriosity";
 
 import ParentClubs from "./pages/ParentClubs";
 import Awans from "./pages/Awans";
@@ -17,6 +18,7 @@ import Showroom from "./pages/Showroom";
 import Styleguide from "./pages/Styleguide";
 import NotFound from "./pages/NotFound";
 import { LanguageProvider } from "@/i18n/LanguageContext";
+import RouteScroll from "./components/RouteScroll";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <RouteScroll />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/projects" element={<Projects />} />
@@ -38,6 +41,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/passion-play" element={<PassionPlay />} />
             <Route path="/passion-play/action-for-happiness" element={<ActionForHappiness />} />
+            <Route path="/passion-play/joy-curiosity" element={<JoyCuriosity />} />
             <Route path="/styleguide" element={<Styleguide />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

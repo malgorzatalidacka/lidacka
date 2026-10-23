@@ -1,0 +1,15 @@
+.inspirations-page .inspiration-section-label { display:flex; gap:1.5rem; border-top:1px solid hsl(var(--border)); padding-top:1.5rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.15em; }
+.inspirations-page .inspiration-artifact summary { padding:.75rem 0; cursor:pointer; text-decoration:underline; text-underline-offset:4px; font-size:.875rem; }
+.inspirations-page .inspiration-bookshelf { display:flex; flex-wrap:wrap; align-items:flex-end; gap:2rem; padding:1rem 1rem 0; border-bottom:8px solid hsl(var(--foreground)); }
+.inspirations-page .inspiration-book { width:180px; min-height:260px; border:1px solid hsl(var(--foreground) / .55); text-align:left; background:hsl(var(--secondary)); transition:transform .2s ease; }
+.inspirations-page .inspiration-book:nth-child(3n + 2) { background:hsl(var(--background)); min-height:280px; }
+.inspirations-page .inspiration-book-cover { display:flex; min-height:inherit; flex-direction:column; gap:1.25rem; padding:1.5rem 1rem; border-left:5px solid hsl(var(--foreground) / .15); overflow-wrap:anywhere; }
+.inspirations-page .inspiration-book[aria-expanded="true"] { transform:translateY(-12px); border-color:hsl(var(--foreground)); }
+.inspirations-page .inspiration-book-notes { padding:2rem 0; border-bottom:1px solid hsl(var(--border)); }
+.inspirations-page .inspiration-experiment-link { position:relative; display:inline-flex; width:min(520px,100%); min-height:8rem; aspect-ratio:360/140; color:#fff; font-size:.875rem; }
+.inspirations-page .inspiration-experiment-link svg { position:absolute; inset:0; width:100%; height:100%; }
+.inspirations-page :is(a,button,summary):focus-visible { outline:3px solid hsl(var(--foreground)); outline-offset:5px; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) { .inspirations-page .inspiration-book:hover { transform:translateY(-8px); } }
+@media (max-width:480px) { .inspirations-page .inspiration-bookshelf { gap:1.25rem; padding-inline:0; } .inspirations-page .inspiration-book { width:min(180px,100%); } }
+@media (prefers-reduced-motion:reduce) { .inspirations-page .inspiration-book { transition:none; transform:none; } }
+html[data-reduce-motion="true"] .inspirations-page .inspiration-book { transition:none; transform:none; }

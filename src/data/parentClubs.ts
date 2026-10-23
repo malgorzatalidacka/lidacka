@@ -33,8 +33,8 @@ export interface Scenario {
 
 export const parentClubsIntro = {
   title: {
-    pl: "Współpraca z Klubami Rodziców w Krakowie",
-    en: "Collaboration with Parents' Clubs in Kraków",
+    pl: "Kluby Rodziców w Krakowie",
+    en: "Parents' Clubs in Kraków",
   } as Localized,
   lead: {
     pl: "Projektowanie i prowadzenie zajęć psychoedukacyjnych dla rodziców oraz tworzenie praktycznych materiałów wspierających rodzicielstwo.",
@@ -273,3 +273,5 @@ export const scenarios: Scenario[] = [
     designed: commonDesigned,
   },
 ];
+
+

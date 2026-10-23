@@ -1,145 +1,45 @@
-import Layout from "@/components/layout/Layout";
-import ScrollRevealText from "@/components/ScrollRevealText";
-import { passions, PassionEntry } from "@/data/passions";
-import { useLanguage } from "@/i18n/LanguageContext";
-import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import Layout from "@/components/layout/Layout";
+import Bookshelf from "@/components/inspirations/Bookshelf";
 
-const PassionCard = ({ entry, index }: { entry: PassionEntry; index: number }) => {
-  const { tl } = useLanguage();
-  const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
+import InspirationMedia from "@/components/inspirations/InspirationMedia";
+import { inspirations as c, inspirationMedia as media } from "@/data/inspirations";
+import { useLanguage } from "@/i18n/LanguageContext";
+import "./PassionPlay.css";
+export default function PassionPlay() {
+  const { tl, language } = useLanguage();
+  const pl = language === "pl";
+  return <Layout><div className="inspirations-page">
+    <section className="container-editorial pt-10 md:pt-14 pb-10 md:pb-12">
+      <p className="label-uppercase text-muted-foreground">{pl ? "Inspiracje" : "Inspirations"}</p>
+      <h1 className="heading-large mt-5 max-w-5xl">{tl(c.title)}</h1>
+      <p className="text-editorial text-muted-foreground mt-6 max-w-2xl">{tl(c.lead)}</p>
+      <nav aria-label={pl ? "Obszary inspiracji" : "Inspiration areas"} className="flex flex-wrap gap-x-6 gap-y-2 mt-6">{[["community", "Action for Happiness"], ["care", "Polish Puppy Rescue"], ["books", pl ? "Książki" : "Books"], ["sport", "Sport"], ["joy", pl ? "Radość i ciekawość" : "Joy & Curiosity"]].map(([id, label]) => <a key={id} href={`#${id}`} className="inline-flex min-h-11 items-center text-sm link-underline">{label}</a>)}</nav>
+    </section>
+    <section id="community" aria-labelledby="community-title" className="container-editorial pb-10 md:pb-14 scroll-mt-8">
+      <div className="inspiration-section-label"><span>01</span><span>{tl(c.community.subtitle)}</span></div>
+      <div className="grid md:grid-cols-12 gap-8 md:gap-12 mt-6"><div className="md:col-span-5"><h2 id="community-title" className="heading-medium">{c.community.title}</h2><p className="text-body text-muted-foreground mt-4">{tl(c.community.body)}</p><p className="label-uppercase mt-4">{tl(c.community.note)}</p><Link to="/passion-play/action-for-happiness" className="inline-flex min-h-11 items-center link-underline text-sm mt-5">{pl ? "Dlaczego projektuję dla dobrostanu →" : "Why I design for wellbeing →"}</Link></div><div className="md:col-span-7"><InspirationMedia media={media.community} aspect="aspect-[3/2]" /></div></div>
+      <details className="inspiration-artifact mt-6 md:ml-[43%]"><summary>{pl ? "Zajrzyj do materiałów ze spotkań" : "Look at the meeting materials"}</summary><div className="mt-5"><InspirationMedia media={media.artifact} aspect="aspect-[16/9]" /></div></details>
+    </section>
+    <section id="care" aria-labelledby="care-title" className="container-editorial pb-10 md:pb-14 scroll-mt-8">
+      <div className="inspiration-section-label"><span>02</span><span>{tl(c.care.subtitle)}</span></div>
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 mt-6 mb-6"><div><h2 id="care-title" className="heading-medium">{c.care.title}</h2><p className="text-sm text-muted-foreground mt-3">Fundacja TAB</p></div><p className="text-body text-muted-foreground">{tl(c.care.body)}</p></div>
+      <div className="grid md:grid-cols-[1.3fr_1fr] gap-8 items-start"><InspirationMedia media={media.care} /><div className="md:pt-10"><InspirationMedia media={media.everyday} /></div></div>
+    </section>
+    <section id="books" aria-labelledby="books-title" className="container-editorial pb-10 md:pb-14 scroll-mt-8"><div className="inspiration-section-label"><span>03</span><span>{tl(c.books.subtitle)}</span></div><h2 id="books-title" className="heading-medium mt-6">{tl(c.books.title)}</h2><p className="text-body text-muted-foreground max-w-2xl mt-5 mb-6">{tl(c.books.body)}</p><Bookshelf /></section>
+    <section id="sport" aria-labelledby="sport-title" className="container-editorial pb-10 md:pb-14 scroll-mt-8">
+      <div className="inspiration-section-label"><span>04</span><span>{tl(c.sport.subtitle)}</span></div><div className="grid md:grid-cols-12 gap-8 mt-6 mb-6"><h2 id="sport-title" className="heading-large md:col-span-7 max-w-3xl">{tl(c.sport.title)}</h2><p className="text-body text-muted-foreground md:col-span-5">{tl(c.sport.body)}</p></div>
+      <InspirationMedia media={media.sport} aspect="aspect-[4/3] md:aspect-[21/9]" /><ol className="grid md:grid-cols-3 gap-8 mt-6">{c.sport.reflections.map((reflection, index) => <li key={reflection.title.en} className="border-t border-foreground pt-5"><span className="text-3xl md:text-5xl tabular-nums">0{index + 1}</span><h3 className="heading-small mt-5">{tl(reflection.title)}</h3><p className="text-muted-foreground mt-3 leading-[1.5]">{tl(reflection.body)}</p></li>)}</ol>
+    </section>
+    <section id="joy" aria-labelledby="joy-title" className="container-editorial pb-10 md:pb-14 scroll-mt-8">
+      <div className="inspiration-section-label"><span>05</span><span>{tl(c.joy.subtitle)}</span></div>
+      <h2 id="joy-title" className="heading-medium mt-6">{pl ? "Radość i ciekawość" : "Joy & Curiosity"}</h2>
+      {/* Add a personal description, image or digital artefact here. */}
+      <div className="border border-dashed border-border bg-secondary/30 p-6 mt-6">
+        <p className="text-sm text-muted-foreground">{pl ? "Miejsce na opis, zdjęcie lub inny materiał." : "Space for a description, photo or other material."}</p>
+      </div>
+    </section>
+    <div className="container-editorial pb-12 md:pb-16"><p className="text-editorial max-w-3xl border-t border-border pt-6">{tl(c.closing)}</p></div>
+  </div></Layout>;
+}
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([e]) => {
-        if (e.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 },
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <article
-      ref={ref}
-      style={{ transitionDelay: `${(index % 3) * 90}ms` }}
-      className={cn(
-        "group border border-border bg-card p-6 md:p-8 flex flex-col gap-4",
-        "transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_hsl(var(--foreground)/0.35)]",
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
-        entry.span,
-      )}
-    >
-      <span className="label-uppercase text-muted-foreground text-[10px] md:text-xs">
-        {tl(entry.tag)}
-      </span>
-
-      {entry.image && (
-        <div className="overflow-hidden aspect-[16/10]">
-          <img
-            src={entry.image}
-            alt={tl(entry.title)}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-        </div>
-      )}
-
-      <h2
-        className={cn(
-          entry.kind === "quote"
-            ? "heading-small md:text-3xl leading-[1.25] text-balance"
-            : "text-lg md:text-xl font-medium",
-        )}
-      >
-        {tl(entry.title)}
-      </h2>
-
-      {tl(entry.body) && (
-        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-          {tl(entry.body)}
-        </p>
-      )}
-
-      {entry.items && (
-        <ul className="space-y-2">
-          {entry.items.map((item, i) => (
-            <li
-              key={i}
-              className="text-sm md:text-base border-b border-border pb-2 last:border-0"
-            >
-              {tl(item)}
-            </li>
-          ))}
-        </ul>
-      )}
-
-      {entry.source && (
-        <span className="text-xs text-muted-foreground mt-auto">— {entry.source}</span>
-      )}
-    </article>
-  );
-};
-
-const PassionPlay = () => {
-  const { t, language } = useLanguage();
-
-  return (
-    <Layout>
-      <section className="container-editorial pt-24 md:pt-32 pb-10 md:pb-16">
-        <span className="label-uppercase text-muted-foreground">{t("passion.label")}</span>
-        <ScrollRevealText key={language} className="heading-large mt-4 max-w-5xl">
-          {t("passion.title")}
-        </ScrollRevealText>
-        <p className="text-body text-muted-foreground max-w-2xl mt-8">{t("passion.intro")}</p>
-      </section>
-
-      <section className="container-editorial pb-6 md:pb-10">
-        <Link
-          to="/passion-play/action-for-happiness"
-          className="group block relative overflow-hidden border border-border bg-card p-6 md:p-10 lg:p-12 transition-all duration-700 hover:-translate-y-1 hover:shadow-[0_18px_40px_-24px_hsl(var(--foreground)/0.35)]"
-        >
-          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-            <div>
-              <span className="label-uppercase text-muted-foreground text-[10px] md:text-xs">
-                {t("passion.featureTag")}
-              </span>
-              <h2 className="heading-medium mt-4 text-balance">{t("passion.featureTitle")}</h2>
-              <p className="text-muted-foreground mt-4 max-w-lg">{t("passion.featureBody")}</p>
-              <span className="link-underline label-uppercase inline-block mt-6 md:mt-8">
-                {t("passion.featureCta")}
-              </span>
-            </div>
-            <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-              <img
-                src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1200&h=750&fit=crop"
-                alt={t("passion.featureTitle")}
-                loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-          </div>
-        </Link>
-      </section>
-
-      <section className="container-editorial pb-24 md:pb-32">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 auto-rows-auto">
-          {passions.map((entry, index) => (
-            <PassionCard key={entry.id} entry={entry} index={index} />
-          ))}
-        </div>
-        <p className="text-sm text-muted-foreground mt-10 md:mt-14 max-w-xl">
-          {t("passion.outro")}
-        </p>
-      </section>
-    </Layout>
-  );
-};
-
-export default PassionPlay;

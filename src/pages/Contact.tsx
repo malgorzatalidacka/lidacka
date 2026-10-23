@@ -1,113 +1,48 @@
-import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import ScrollRevealText from "@/components/ScrollRevealText";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { toast } from "sonner";
+
 
 const Contact = () => {
   const { t, language } = useLanguage();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const socialLinks = [
-    { label: "Instagram", url: "https://instagram.com" },
-    { label: "LinkedIn", url: "https://linkedin.com" },
-    { label: "Dribbble", url: "https://dribbble.com" },
-    { label: "Behance", url: "https://behance.net" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/ma%C5%82gorzata-lidacka-8601634a/" },
+    { label: "PolishPuppyRescue", url: "https://www.polishpuppyrescue.org/blank-1" },
+    { label: "Fundacja TAB", url: "https://fundacjatab.pl/" },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success(t("contact.form.success"));
-    setForm({ name: "", email: "", message: "" });
-  };
 
   return (
     <Layout>
       {/* Hero */}
-      <section className="container-editorial pt-24 md:pt-32 pb-16 md:pb-24">
+      <section className="container-editorial pt-12 md:pt-16 pb-10 md:pb-12">
         <div className="w-full overflow-hidden">
-          <ScrollRevealText key={language} className="text-3xl md:text-5xl lg:text-6xl font-normal leading-[1] tracking-tight mb-12">
+          <ScrollRevealText key={language} className="heading-large mb-8">
             {t("contact.title")}
           </ScrollRevealText>
 
-          <p className="text-body text-muted-foreground max-w-xl mb-12">
-            {t("contact.lead")}
-          </p>
-
-          <div>
-            <span className="label-uppercase text-muted-foreground block mb-3">{t("contact.emailLabel")}</span>
-            <a
-              href="mailto:hello@lidacka.studio"
-              className="text-xl md:text-2xl font-normal hover:opacity-70 transition-opacity"
-            >
-              hello@lidacka.studio
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Form */}
-      <section className="container-editorial pb-24 md:pb-32">
-        <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-12 md:col-span-2">
-            <span className="label-uppercase text-muted-foreground">{t("contact.formTitle")}</span>
-          </div>
-          <div className="col-span-12 md:col-span-8">
-            <form onSubmit={handleSubmit} className="space-y-8 max-w-xl">
-              <div>
-                <label htmlFor="name" className="label-uppercase text-muted-foreground block mb-2">
-                  {t("contact.form.name")}
-                </label>
-                <input
-                  id="name"
-                  required
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder={t("contact.form.namePlaceholder")}
-                  className="w-full bg-transparent border-b border-border py-3 text-body focus:outline-none focus:border-foreground transition-colors"
-                />
+          <div className="flex flex-col gap-8">
+            {[
+              { label: t("contact.emailLabel"), href: "mailto:lidacka@zohomail.eu", value: "lidacka@zohomail.eu" },
+              { label: language === "pl" ? "Telefon" : "Phone", href: "tel:+48696070758", value: "+48 696070758" },
+            ].map((item) => (
+              <div key={item.href} className="flex flex-col items-start gap-3">
+                <span className="label-uppercase text-muted-foreground">{item.label}</span>
+                <a
+                  href={item.href}
+                  className="text-xl md:text-2xl leading-normal font-normal hover:opacity-70 transition-opacity"
+                >
+                  {item.value}
+                </a>
               </div>
-              <div>
-                <label htmlFor="email" className="label-uppercase text-muted-foreground block mb-2">
-                  {t("contact.form.email")}
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  placeholder={t("contact.form.emailPlaceholder")}
-                  className="w-full bg-transparent border-b border-border py-3 text-body focus:outline-none focus:border-foreground transition-colors"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="label-uppercase text-muted-foreground block mb-2">
-                  {t("contact.form.message")}
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={5}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder={t("contact.form.messagePlaceholder")}
-                  className="w-full bg-transparent border-b border-border py-3 text-body focus:outline-none focus:border-foreground transition-colors resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="px-8 py-3 bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
-              >
-                {t("contact.form.submit")}
-              </button>
-            </form>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Social & Location */}
-      <section className="container-editorial pb-24 md:pb-32">
+      <section className="container-editorial pb-12 md:pb-16">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16">
           <div>
             {socialLinks.map((link, index) => (
@@ -130,6 +65,7 @@ const Contact = () => {
               <br />
               {t("contact.locationSub")}
             </p>
+            <p className="text-body text-muted-foreground mt-4">{language === "pl" ? "Pracuję w języku polskim i angielskim." : "I work in Polish and English."}</p>
           </div>
         </div>
       </section>
@@ -138,3 +74,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+

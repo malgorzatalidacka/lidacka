@@ -60,34 +60,9 @@ export const projects: Project[] = [
     featured: true
   },
   {
-    id: "awans",
-    title: "AWANS_",
-    client: "Małopolski Związek Piłki Ręcznej",
-    category: {
-      pl: "Learning Design · Edukacja sportowa · Program rozwojowy",
-      en: "Learning Design · Sports Education · Development Programme",
-    },
-    year: "2023–2024",
-    description: {
-      pl: "AWANS to program rozwojowy wspierający młodych sędziów piłki ręcznej w drodze od pierwszych doświadczeń na boisku do certyfikacji i sędziowania na wyższym poziomie. Program łączy warsztaty, treningi praktyczne, mecze, informację zwrotną, mentoring i ocenę w jedną spójną ścieżkę uczenia się.",
-      en: "AWANS is a development programme designed to support young handball referees in progressing from their first experiences on court towards certification and higher-level refereeing. The programme combines workshops, practical training, matches, feedback, mentoring and assessment into one structured learning journey.",
-    },
-    challenge: {
-      pl: "Młodzi sędziowie często znają przepisy, ale bycie pewnym siebie sędzią wymaga znacznie więcej niż wiedza teoretyczna. Potrzebują przestrzeni, w której mogą ćwiczyć decyzje, otrzymywać konstruktywny feedback i stopniowo budować samodzielność.",
-      en: "Young referees often know the rules, but becoming a confident referee requires much more than theoretical knowledge. They need a space to practise decisions, receive constructive feedback and gradually build independence.",
-    },
-    solution: {
-      pl: "AWANS został zaprojektowany jako uporządkowana ścieżka rozwoju: od pierwszego gwizdka, przez praktykę i refleksję, aż po egzamin końcowy. Połączenie teorii, realnych sytuacji meczowych, mentoringu i oceny zamienia wiedzę w zawodową kompetencję.",
-      en: "AWANS was designed as a structured development pathway: from the first whistle, through practice and reflection, to the final exam. The combination of theory, real match situations, mentoring and assessment turns knowledge into professional competence.",
-    },
-    image: awansHero,
-    images: [awansHero],
-    featured: true
-  },
-  {
     id: "kluby-rodzicow",
-    title: "Współpraca z Klubami Rodziców w Krakowie_",
-    client: "Kluby Rodziców w Krakowie",
+    title: "Kluby Rodziców w Krakowie",
+    client: "Fundacja KDM",
     category: {
       pl: "Learning Design · Warsztaty psychoedukacyjne · Rodzicielstwo",
       en: "Learning Design · Psychoeducational Workshops · Parenting",
@@ -109,28 +84,28 @@ export const projects: Project[] = [
     images: [holographicBust, flowersPainting, watercolorFlowers]
   },
   {
-    id: "open-future",
-    title: "Nasz nowy świat_",
-    client: "Open Future",
+    id: "awans",
+    title: "Awans 2026",
+    client: "Małopolski Związek Piłki Ręcznej",
     category: {
-      pl: "Learning Design · Program rozwojowy · Przyszłość pracy",
-      en: "Learning Design · Development Programme · Future of Work",
+      pl: "Learning Design · Edukacja sportowa · Program rozwojowy",
+      en: "Learning Design · Sports Education · Development Programme",
     },
-    year: "2023",
+    year: "2023–2024",
     description: {
-      pl: "Program rozwojowy i warsztaty dla młodych ludzi przygotowujących się do przyszłości pracy. Open Future łączy rozwój kompetencji przyszłości, projektowanie ścieżek kariery i narzędzia uczenia się przez całe życie.",
-      en: "A development programme and workshops for young people preparing for the future of work. Open Future combines future-ready skills, career-path design and lifelong learning tools.",
+      pl: "AWANS to program rozwojowy wspierający młodych sędziów piłki ręcznej w drodze od pierwszych doświadczeń na boisku do certyfikacji i sędziowania na wyższym poziomie. Program łączy warsztaty, treningi praktyczne, mecze, informację zwrotną, mentoring i ocenę w jedną spójną ścieżkę uczenia się.",
+      en: "AWANS is a development programme designed to support young handball referees in progressing from their first experiences on court towards certification and higher-level refereeing. The programme combines workshops, practical training, matches, feedback, mentoring and assessment into one structured learning journey.",
     },
     challenge: {
-      pl: "Młodzi uczestnicy mieli różne doświadczenia edukacyjne i niepewność co do własnych możliwości. Wyzwaniem było stworzenie przestrzeni, w której każdy czuje się gotów eksplorować swoje mocne strony i próbować nowych ról.",
-      en: "Participants came with varied educational experiences and uncertainty about their own potential. The challenge was to create a space where everyone felt ready to explore their strengths and try on new roles.",
+      pl: "Młodzi sędziowie często znają przepisy, ale bycie pewnym siebie sędzią wymaga znacznie więcej niż wiedza teoretyczna. Potrzebują przestrzeni, w której mogą ćwiczyć decyzje, otrzymywać konstruktywny feedback i stopniowo budować samodzielność.",
+      en: "Young referees often know the rules, but becoming a confident referee requires much more than theoretical knowledge. They need a space to practise decisions, receive constructive feedback and gradually build independence.",
     },
     solution: {
-      pl: "Zaprojektowałam cykl warsztatów oparty na refleksji, prototypowaniu i realnych sytuacjach. Uczestnicy odkrywali swoje kompetencje, tworzyli osobiste mapy rozwoju i ćwiczyli podejmowanie decyzji w warunkach zmiany.",
-      en: "I designed a workshop cycle built on reflection, prototyping and real-life scenarios. Participants discovered their competencies, created personal development maps and practised decision-making in conditions of change.",
+      pl: "AWANS został zaprojektowany jako uporządkowana ścieżka rozwoju: od pierwszego gwizdka, przez praktykę i refleksję, aż po egzamin końcowy. Połączenie teorii, realnych sytuacji meczowych, mentoringu i oceny zamienia wiedzę w zawodową kompetencję.",
+      en: "AWANS was designed as a structured development pathway: from the first whistle, through practice and reflection, to the final exam. The combination of theory, real match situations, mentoring and assessment turns knowledge into professional competence.",
     },
-    image: flowersPainting,
-    images: [flowersPainting, birdIllustration, goldenJewelry],
+    image: awansHero,
+    images: [awansHero],
     featured: true
   },
   {
@@ -156,6 +131,31 @@ export const projects: Project[] = [
     },
     image: catIllustration,
     images: [catIllustration, birdIllustration, flowersPainting]
+  },
+  {
+    id: "open-future",
+    title: "Nasz nowy świat_",
+    client: "Open Future",
+    category: {
+      pl: "Learning Design · Program rozwojowy · Przyszłość pracy",
+      en: "Learning Design · Development Programme · Future of Work",
+    },
+    year: "2023",
+    description: {
+      pl: "Program rozwojowy i warsztaty dla młodych ludzi przygotowujących się do przyszłości pracy. Open Future łączy rozwój kompetencji przyszłości, projektowanie ścieżek kariery i narzędzia uczenia się przez całe życie.",
+      en: "A development programme and workshops for young people preparing for the future of work. Open Future combines future-ready skills, career-path design and lifelong learning tools.",
+    },
+    challenge: {
+      pl: "Młodzi uczestnicy mieli różne doświadczenia edukacyjne i niepewność co do własnych możliwości. Wyzwaniem było stworzenie przestrzeni, w której każdy czuje się gotów eksplorować swoje mocne strony i próbować nowych ról.",
+      en: "Participants came with varied educational experiences and uncertainty about their own potential. The challenge was to create a space where everyone felt ready to explore their strengths and try on new roles.",
+    },
+    solution: {
+      pl: "Zaprojektowałam cykl warsztatów oparty na refleksji, prototypowaniu i realnych sytuacjach. Uczestnicy odkrywali swoje kompetencje, tworzyli osobiste mapy rozwoju i ćwiczyli podejmowanie decyzji w warunkach zmiany.",
+      en: "I designed a workshop cycle built on reflection, prototyping and real-life scenarios. Participants discovered their competencies, created personal development maps and practised decision-making in conditions of change.",
+    },
+    image: flowersPainting,
+    images: [flowersPainting, birdIllustration, goldenJewelry],
+    featured: true
   },
   {
     id: "make-your-vote",
@@ -233,3 +233,5 @@ export const projects: Project[] = [
 
 export const getFeaturedProjects = () => projects.filter(p => p.featured);
 export const getProjectById = (id: string) => projects.find(p => p.id === id);
+
+
